@@ -264,7 +264,7 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 100px 0;
     color: #fff;
     background-color: rgb(87, 87, 87);
     -webkit-background-size: cover;
@@ -395,12 +395,30 @@ body {
 }
 
 .buy_now {
-    padding: 16px 50px;
-    background-color: #00703c;
-    font-size: x-large;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #4CAC53;
+    font-size: 20px;
     color: white;
     font-family: sans-serif;
-    margin-top: 16px;
     border: none;
-    border-radius: 4px;
+    letter-spacing: 2px;
+    height: 70px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+}
+
+.buy_now_select_value {
+    height: 70px;
+    vertical-align: middle;
+    display: block;
+    padding: 12px;
+    padding-top: 8px;
+    font-size: 18px;
+    border: 1px solid lightgray;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }

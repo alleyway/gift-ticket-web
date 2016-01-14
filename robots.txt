@@ -1,0 +1,7 @@
+User-agent: *
+Sitemap: http://scratchoffgiftcard.com/sitemap.xml
+Disallow: /ebay_content.html
+Disallow: /index_old.html
+Disallow: /README.md
+
+

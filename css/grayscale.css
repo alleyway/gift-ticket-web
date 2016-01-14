@@ -48,7 +48,7 @@ p {
 }
 
 a {
-    color: #42dca3;
+    color: #dc483c;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -298,9 +298,10 @@ a:focus {
 }
 
 .btn {
-    border-radius: 0;
+
+    border-radius: 4px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -424,4 +425,19 @@ h1 {
 
 .navbar-toggle {
     color: #fff;
+}
+
+.intro_buy_now {
+    margin-top:8px;
+    /*background-color: white;*/
+    border: 2px solid white;
+    font-weight: 700;
+    padding: 6px 30px;
+}
+.intro_buy_now a {
+    color: white;
+    letter-spacing: 1px;
+}
+.intro_buy_now a:hover {
+    color: lightgray;
 }

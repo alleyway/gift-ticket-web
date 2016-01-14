@@ -149,9 +149,9 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-    /*height: auto;*/
+    /*height: 500px;*/
     background-color: #4CAC53;
-    padding: 100px 0;
+    padding: 0;
     text-align: center;
     color: #fff;
     background-size: 50%;
@@ -276,12 +276,6 @@ a:focus {
     -o-background-size: cover;
 }
 
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
 @media(min-width:767px) {
     .content-section {
         padding-top: 50px;
@@ -289,11 +283,6 @@ a:focus {
 
     .download-section {
         padding: 100px 0;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
     }
 }
 
@@ -363,11 +352,10 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
 
-@media(min-width:768px) {
-    .intro_robot {
-        height: 100%;
-        background: url('../img/smiling_robot.png') no-repeat bottom center scroll;
-    }
+.intro_robot {
+    height: 100%;
+    background: url('../img/smiling_robot.png') no-repeat bottom center;
+    background-size: contain;
 }
 
 .made_in_usa {
@@ -417,8 +405,18 @@ body {
 }
 
 .intro_product {
-    padding-top: 100px;
+    padding-top: 60px;
+    padding-bottom: 50%;
 }
+
+@media(min-width:768px) {
+    .intro_product {
+        padding-top: 100px;
+        padding-bottom: 180px;
+    }
+}
+
+
 h1 {
         font-size: 24px;
 }

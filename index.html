@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" itemscope itemtype="http://schema.org/Game">
 
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -74,13 +74,31 @@
 </nav>
 
 <!-- Intro Header -->
-<header class="intro">
-    <div class="intro_robot">
+<header class="content-section intro" style="padding-top: 0">
+<div class="intro_robot">
+        <div class="container">
+            <div class="col-sm-5 col-sm-offset-7">
+                <div class="intro_product">
+                <h1 itemprop="name">Scratch-Off Gift Card</h1>
+                    <h4>The <i>fun</i> way to gift money!</h4>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-empty"></i><br/>
+                    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" style="display: inline-block">
+                        <!--price is 1000, a number, with locale-specific thousands separator
+                        and decimal mark, and the $ character is marked up with the
+                        machine-readable code "USD" -->
+                        <span itemprop="priceCurrency" content="USD">$</span><span
+                            itemprop="price" content="4.99">4.99</span>
+                    </div>- FREE shipping
 
+                </div>
+            </div>
 
     </div>
-
-
+</div>
     <!--<div class="intro-body">-->
     <!--<div class="container">-->
     <!--<div class="row">-->
@@ -159,22 +177,22 @@
                 <input type="hidden" name="custom" value="source=website">
 
                 <div class="buy_now_select_value">
-                            <input type="hidden" name="on0" value="Scratch-off prize value:">Scratch-off prize value
-                            <br/>
-                            <select name="os0">
-                                <option value="You give them $25">You give them $25</option>
-                                <option value="You give them $50">You give them $50</option>
-                                <option value="You give them $75">You give them $75</option>
-                                <option value="You give them $100">You give them $100</option>
-                                <option value="You give them $150">You give them $150</option>
-                                <option value="You give them $200">You give them $200</option>
-                                <option value="You give them $300">You give them $300</option>
-                                <option value="You give them $500">You give them $500</option>
-                                <option value="You give them $1,000">You give them $1,000</option>
-                            </select>
+                    <input type="hidden" name="on0" value="Scratch-off prize value:">Scratch-off prize value
+                    <br/>
+                    <select name="os0">
+                        <option value="You give them $25">You give them $25</option>
+                        <option value="You give them $50">You give them $50</option>
+                        <option value="You give them $75">You give them $75</option>
+                        <option value="You give them $100">You give them $100</option>
+                        <option value="You give them $150">You give them $150</option>
+                        <option value="You give them $200">You give them $200</option>
+                        <option value="You give them $300">You give them $300</option>
+                        <option value="You give them $500">You give them $500</option>
+                        <option value="You give them $1,000">You give them $1,000</option>
+                    </select>
                 </div>
 
-                            <input class="buy_now" type="submit" value="BUY NOW - $4.99">
+                <input class="buy_now" type="submit" value="BUY NOW - $4.99">
 
 
             </form>

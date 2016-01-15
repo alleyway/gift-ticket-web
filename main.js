@@ -21,6 +21,10 @@ $(function () {
     if (buyNowForm != null) {
         var binding = buyNowForm.on("submit", function (event) {
             event.preventDefault();
+
+            //TODO: change to when they actually finish the purchase
+            goog_report_conversion();
+
             ga('send', 'event', 'Buy Now Form', 'submit', {
                 hitCallback: createFunctionWithTimeout(function () {
                     buyNowForm.off();

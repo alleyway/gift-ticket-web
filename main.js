@@ -19,7 +19,7 @@ $(function () {
     var buyNowForm = $('#buy_now_form');
 
     if (buyNowForm != null) {
-        var binding = buyNowForm.on("submit", function (event) {
+        buyNowForm.on("submit", function (event) {
             event.preventDefault();
 
             //TODO: change to when they actually finish the purchase
@@ -41,6 +41,11 @@ $(function () {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    $(window).unload(function(){
+        ga('send', 'pageview', '/page_unload');
+    })
+
 });
 
 // Closes the Responsive Menu on Menu Item Click

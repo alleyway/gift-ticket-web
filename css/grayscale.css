@@ -31,6 +31,12 @@ h6 {
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #4CAF50;
+}
+
+h4 {
+    color: #7FAEC4;
+    font-size: 1.4em;
 }
 
 p {
@@ -48,7 +54,7 @@ p {
 }
 
 a {
-    color: #dc483c;
+    color: #fff;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -56,8 +62,8 @@ a {
 
 a:hover,
 a:focus {
-    text-decoration: none;
-    color: #1d9b6c;
+    text-decoration: underline;
+    color: #ccc;
 }
 
 .light {
@@ -439,4 +445,32 @@ h1 {
 }
 .intro_buy_now a:hover {
     color: lightgray;
+}
+
+.greybackground {
+    background-color: #F8F8F8;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-top: 30px;
+}
+
+.footer_title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sub_nav {
+    padding-top: 0px;
+    display: table;
+    width: 100%;
+    background-color: #4CAC53;
+}
+
+.navbar-sub-custom {
+    background-color: #4CAC53;
 }

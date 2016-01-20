@@ -6,12 +6,12 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://scratchoffgiftcard.com/</loc>
+        <loc>http://thegiftticket.com/</loc>
         <changefreq>daily</changefreq>
-        <lastmod>2016-01-13</lastmod>
+        <lastmod>2016-01-19</lastmod>
         <image:image>
-            <image:loc>http://scratchoffgiftcard.com/img/MoneyMatch_Product_Photo_Unscratched.jpg</image:loc>
-            <image:title>Scratch Off Gift Card</image:title>
+            <image:loc>http://thegiftticket.com/img/MoneyMatch_Product_Photo_Unscratched.jpg</image:loc>
+            <image:title>Gift Ticket</image:title>
         </image:image>
     </url>
 </urlset>

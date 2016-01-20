@@ -560,9 +560,9 @@ form .row:first-child .floating-label-form-group {
 }
 
 .alert-success {
-    color: #04844B;
-    background-color: #79ba9d;
-    border-color: #04844B;
+    color: #4CAC53;
+    background-color: #5ff467;
+    border-color: #4CAC53;
     border-radius: 0;
 }
 

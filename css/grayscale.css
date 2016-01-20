@@ -112,7 +112,7 @@ a:focus {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
+    text-decoration: underline;
     background-color: transparent;
 }
 
@@ -444,7 +444,7 @@ h1 {
     letter-spacing: 1px;
 }
 .intro_buy_now a:hover {
-    color: lightgray;
+    text-decoration: underline;
 }
 
 .greybackground {
@@ -470,7 +470,17 @@ footer {
     width: 100%;
     background-color: #4CAC53;
 }
+.sub_nav a {
+    text-transform: uppercase;
+}
+.sub_nav a:hover {
+    color: #4CAC53;
+    background-color: #fff;
+}
 
+.navbar-nav>li>a:hover {
+    background-color: #fff;
+}
 .navbar-sub-custom {
     background-color: #4CAC53;
 }

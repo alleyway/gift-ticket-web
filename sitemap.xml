@@ -14,4 +14,20 @@
             <image:title>Gift Ticket</image:title>
         </image:image>
     </url>
+
+    <url>
+        <loc>http://thegiftticket.com/about.html</loc>
+    </url>
+    <url>
+        <loc>http://thegiftticket.com/privacy.html</loc>
+    </url>
+    <url>
+        <loc>http://thegiftticket.com/terms.html</loc>
+    </url>
+    <url>
+        <loc>http://thegiftticket.com/faq.html</loc>
+    </url>
+    <url>
+        <loc>http://thegiftticket.com/contact.html</loc>
+    </url>
 </urlset>

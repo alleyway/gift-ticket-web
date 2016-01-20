@@ -411,14 +411,14 @@ body {
 }
 
 .intro_product {
-    padding-top: 60px;
-    padding-bottom: 50%;
+    padding-top: 30px;
+    padding-bottom: 60%;
 }
 
 @media(min-width:768px) {
     .intro_product {
-        padding-top: 100px;
-        padding-bottom: 180px;
+        padding-top: 60px;
+        padding-bottom: 100px;
     }
 }
 
@@ -494,4 +494,90 @@ footer {
 }
 .faq_answer a {
     color: #4CAC53;
+}
+
+/*contact*/
+.help-block {
+    color:#a94442;
+    text-align: left;
+}
+.floating-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #7FAEC4;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+    color: #333;
+}
+
+.floating-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    color: #3c3c3c;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+.floating-label-form-group::not(:first-child) {
+    padding-left: 14px;
+    border-left: 1px solid #0f0;
+}
+
+.floating-label-form-group-with-value label {
+    top: 0;
+    opacity: 1;
+}
+
+.floating-label-form-group-with-focus label {
+    color: #7FAEC4;
+}
+
+form .row:first-child .floating-label-form-group {
+    border-top: 1px solid #7FAEC4;
+}
+
+.alert-success {
+    color: #04844B;
+    background-color: #79ba9d;
+    border-color: #04844B;
+    border-radius: 0;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #a94442;
+    border-radius: 0;
+}
+
+
+/*end contact*/
+.contact-send-button {
+    width: 156px;
+    background-color: #4CAC53;
+    color: white;
+    border: none;
 }

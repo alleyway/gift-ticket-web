@@ -610,3 +610,7 @@ form .row:first-child .floating-label-form-group {
 #how h4 {
     margin-top:50px;
 }
+
+.footer_links a {
+    line-height: 1.9;
+}

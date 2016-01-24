@@ -136,7 +136,7 @@ a:focus {
 
 @media(min-width:768px) {
     .navbar-custom {
-        padding: 20px 0;
+        padding: 0 0;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
@@ -411,13 +411,13 @@ body {
 }
 
 .intro_product {
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 60%;
 }
 
 @media(min-width:768px) {
     .intro_product {
-        padding-top: 60px;
+        padding-top: 10px;
         padding-bottom: 100px;
     }
 }

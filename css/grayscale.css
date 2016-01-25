@@ -107,9 +107,13 @@ a:focus {
     .navbar-brand {
         padding: 14px;
     }
-
+    a.navbar-brand img {
+        margin-left: 60px;
+    }
+    .front_page_logo {
+        visibility: hidden;
+    }
 }
-
 
 
 .navbar-custom .nav li a {
@@ -156,7 +160,7 @@ a:focus {
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #4CAC53;
+        /*background: #4CAC53;*/
     }
 }
 
@@ -200,7 +204,11 @@ a:focus {
         font-size: 26px;
     }
 }
-
+a.navbar-brand {
+    -webkit-transition: all .0s ease-in-out;
+    -moz-transition: all .0s ease-in-out;
+    transition: all .0s ease-in-out;
+}
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -368,6 +376,7 @@ body {
 
 .intro_robot {
     height: 100%;
+    display: inline-table;
     background: url('../img/smiling_robot.png') no-repeat bottom center;
     background-size: contain;
 }
@@ -423,13 +432,21 @@ body {
     padding-bottom: 60%;
 }
 
-@media(min-width:768px) {
-    .intro_product {
-        padding-top: 10px;
-        padding-bottom: 100px;
-    }
+.index_logo {
+    display: none;
+    margin: 0 auto;
+    height: 60px;
 }
 
+@media(min-width:768px) {
+    .intro_product {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    .index_logo {
+        display: block;
+    }
+}
 
 h1 {
         font-size: 24px;

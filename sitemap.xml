@@ -7,8 +7,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>http://thegiftticket.com/</loc>
-        <changefreq>weekly</changefreq>
-        <lastmod>2016-01-26</lastmod>
         <image:image>
             <image:loc>http://thegiftticket.com/img/MoneyMatch_Product_Photo_Unscratched.jpg</image:loc>
             <image:title>Gift Ticket</image:title>

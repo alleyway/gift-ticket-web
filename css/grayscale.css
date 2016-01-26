@@ -639,3 +639,9 @@ form .row:first-child .floating-label-form-group {
 .footer_links a {
     line-height: 1.9;
 }
+.legal ul, .legal ol {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-left: 30px;
+}
+

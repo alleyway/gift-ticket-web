@@ -2,6 +2,15 @@
 layout: sub
 title: Contact - The Gift Ticket
 ---
+
+<style>
+
+    .floating-label-form-group:last-child {
+        border-bottom: 1px solid #7FAEC4;
+    }
+
+</style>
+
 <section id="contact" class="container content-section">
     <div class="row">
         <div class="col-lg-offset-2 col-lg-8">
@@ -91,7 +100,7 @@ title: Contact - The Gift Ticket
                     firstName = name.split(' ').slice(0, -1).join(' ');
                 }
                 $.ajax({
-                    url: "//formspree.io/sales@thegiftticket.com",
+                    url: "//formspree.io/support@thegiftticket.com",
                     type: "POST",
                     data: {
                         name: name,

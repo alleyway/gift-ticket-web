@@ -1,0 +1,79 @@
+---
+layout: base
+title: Order Form - The Gift Ticket
+---
+
+<div class="order_header visible-md visible-lg"></div>
+
+
+<section class="container">
+    <div class="row">
+        <div class="col-lg-offset-1 col-lg-8">
+
+            <h1 style="margin: 60px auto">Gift Ticket Order Form</h1>
+
+            <h3>1. Choose Winning Amount</h3>
+
+            <div>
+                <ul class="gift_amounts">
+                    <li>$25</li>
+                    <li>$50</li>
+                    <li>$75</li>
+                    <li>$100</li>
+                    <li>$200</li>
+                    <li>$500</li>
+                    <li>$1000</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-4">
+                    <img src="img/MoneyMatch_Product_Photo_Unscratched.jpg" width="350">
+                </div>
+            </div>
+
+
+            <!--<h3>2. Choose Card (+$1.50)</h3>-->
+            <!--<p>All cards come with a convenient penny!</p>-->
+
+            <h3>2. Tell Us Where to Send It</h3>
+
+            <p>
+                - Automatically grab shipping address from PayPal<br/>
+                - Send direct to recipient
+            </p>
+
+
+            <div class="col-md-6">
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="E3NHQF2A6SXFC">
+                    <table>
+                        <tr><td><input type="hidden" name="on0" value="Winning Amount:">Winning Amount:</td></tr><tr><td><select name="os0">
+                        <option value="$25">$25 </option>
+                        <option value="$50">$50 </option>
+                        <option value="$100">$100 </option>
+                        <option value="$200">$200 </option>
+                        <option value="$500">$500 </option>
+                        <option value="$1000">$1000 </option>
+                    </select> </td></tr>
+                    </table>
+                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 visible-lg">
+            <div class="sideinfo">
+                this is my side thing
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript" src="order.js"></script>

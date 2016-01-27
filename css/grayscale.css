@@ -19,6 +19,7 @@ html {
 
 h1,h2 {
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h1,
@@ -28,9 +29,8 @@ h4,
 h5,
 h6 {
 
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-family: 'Francois One', sans-serif;
     font-weight: 500;
-    letter-spacing: 1px;
     color: #4CAF50;
 }
 
@@ -104,9 +104,6 @@ a:focus {
     padding: 4px;
 }
 @media(min-width:768px) {
-    .navbar-brand {
-        padding: 14px;
-    }
     a.navbar-brand img {
         margin-left: 60px;
     }
@@ -114,7 +111,11 @@ a:focus {
         visibility: hidden;
     }
 }
-
+@media(min-width:970px) {
+    .navbar-brand {
+        padding: 14px;
+    }
+}
 
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
@@ -298,7 +299,7 @@ a.navbar-brand {
     -o-background-size: cover;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
     .content-section {
         padding-top: 50px;
     }
@@ -448,9 +449,6 @@ body {
     }
 }
 
-h1 {
-        font-size: 24px;
-}
 
 .navbar-toggle {
     color: #fff;
@@ -620,7 +618,7 @@ form .row:first-child .floating-label-form-group {
 .about-features {
     font-size: 18px;
     line-height: 1.5;
-    margin: 26px auto;
+    margin: 60px auto;
     text-align: left;
     display: inline-block;
 }
@@ -643,5 +641,34 @@ form .row:first-child .floating-label-form-group {
     font-size: 20px;
     line-height: 1.6;
     margin-left: 30px;
+}
+
+.gift_amounts {
+    padding: 0px;
+}
+.gift_amounts li {
+    display: inline;
+    background-color: white;
+    float:left;
+    text-align: center;
+    border: 2px solid gray;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 4px;
+    width: 80px;
+    font-weight: bold;
+}
+
+.order_header {
+    height: 50px;
+    background-color: #4CAC53;
+}
+
+.sideinfo {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top:100px;
+    height: 500px;
+    border: 2px dashed lightgray;
 }
 

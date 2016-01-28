@@ -7,6 +7,7 @@ title: Order Form - The Gift Ticket
 
 
 <section class="container">
+<form id="pp_form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <div class="row">
         <div class="col-lg-offset-1 col-lg-8">
 
@@ -41,7 +42,7 @@ title: Order Form - The Gift Ticket
             <div class="row custom_order_group">
                 <div class="col-xs-12">
                     <label class="order_option_title" >
-                    <input type="radio" name="where_to_send" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />
+                    <input type="radio" name="where_to_send" value="buyer" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />
                     Send to my shipping address stored in PayPal</label>
                 </div>
             </div>
@@ -49,11 +50,11 @@ title: Order Form - The Gift Ticket
             <div class="row control-group custom_order_group">
                 <div class="col-xs-12">
                     <label class="order_option_title">
-                        <input type="radio" name="where_to_send" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />Send directly to recipient</label>
+                        <input type="radio" name="where_to_send" value="recipient" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />Send directly to recipient</label>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>Address</label>
-                    <input type="text" name="form_addr1" class="form-control" placeholder="Address" id="form_addr1"
+                    <input type="text" name="form_addr1" class="form-control recipient_required" placeholder="Address" id="form_addr1"
                            data-validation-required-message="Enter street address">
                     <p class="help-block text-danger"></p>
                 </div>
@@ -64,17 +65,17 @@ title: Order Form - The Gift Ticket
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>City</label>
-                    <input type="text" name="form_city" class="form-control" placeholder="City" id="form_city">
+                    <input type="text" name="form_city" class="form-control recipient_required" placeholder="City" id="form_city">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>State</label>
-                    <input type="text" name="form_state" class="form-control" placeholder="State" id="form_state">
+                    <input type="text" name="form_state" class="form-control recipient_required" placeholder="State" id="form_state">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>Postal Code</label>
-                    <input type="text" name="form_postal_code" class="form-control" placeholder="Postal Code" id="form_postal_code">
+                    <input type="text" name="form_postal_code" class="form-control recipient_required" placeholder="Postal Code" id="form_postal_code">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
@@ -88,7 +89,7 @@ title: Order Form - The Gift Ticket
                     </div>
                 </div>
                 <div class="col-md-6 text-center"">
-                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="E3NHQF2A6SXFC">
 
@@ -96,7 +97,7 @@ title: Order Form - The Gift Ticket
 
                         <div id="checkout_elements">
 
-                            <input type="hidden" name="os0" value="$25">
+                            <!--<input type="hidden" name="os0" value="$25">-->
 
                             <!--<INPUT TYPE="hidden" name="address_override" value="0">-->
                             <input type="hidden" name="first_name" value="John">
@@ -115,19 +116,23 @@ title: Order Form - The Gift Ticket
                             <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1"
                                  height="1">
                         </div>
-                    </form>
+
                 </div>
             </div>
         </div>
 
         <div class="col-lg-3 visible-lg">
             <div class="sideinfo">
-                this is my side thing
+                <ul>
+                    <li>Don't forget, YOU are responsible for paying your recipient the winnings!</li>
+                    <li>You'll get an email confirming your redemption contact details</li>
+                </ul>
+
 
             </div>
         </div>
     </div>
-
+</form>
 </section>
 
 <script type="text/javascript" src="order.js"></script>

@@ -13,7 +13,8 @@ $(function() {
 $(function () {
 
     $(".gift_amounts li").on("click", function(e){
-        $(this).toggleClass("amount_selected");
+        $(".gift_amounts li").removeClass("amount_selected");
+        $(this).addClass("amount_selected");
     });
 
     var once = false;
@@ -24,39 +25,50 @@ $(function () {
         }
         else
             $(".custom_order_group").toggleClass("custom_order_group_selected");
+
+        if ($('input:radio[name="where_to_send"]:checked').val() == "recipient") {
+            $(".recipient_required").prop("required", true);
+        } else {
+            $(".recipient_required").prop("required", false);
+        }
     });
 
+    $("#pp_form").on("submit", function(e){
+
+
+
+    });
 
 });
 
 
 $(function() {
 
-    $("input,textarea").jqBootstrapValidation({
-        preventSubmit: true,
-        submitError: function($form, event, errors) {
-            // additional error messages or events
-        },
-        submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
-            }
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
-    });
-
-    $("a[data-toggle=\"tab\"]").click(function(e) {
-        e.preventDefault();
-        $(this).tab("show");
-    });
+    //$("input,textarea").jqBootstrapValidation({
+    //    preventSubmit: true,
+    //    submitError: function($form, event, errors) {
+    //        // additional error messages or events
+    //    },
+    //    submitSuccess: function($form, event) {
+    //        event.preventDefault(); // prevent default submit behaviour
+    //        // get values from FORM
+    //        var name = $("input#name").val();
+    //        var email = $("input#email").val();
+    //        var phone = $("input#phone").val();
+    //        var message = $("textarea#message").val();
+    //        var firstName = name; // For Success/Failure Message
+    //        // Check for white space in name for Success/Fail message
+    //        if (firstName.indexOf(' ') >= 0) {
+    //            firstName = name.split(' ').slice(0, -1).join(' ');
+    //        }
+    //    },
+    //    filter: function() {
+    //        return $(this).is(":visible");
+    //    },
+    //});
+    //
+    //$("a[data-toggle=\"tab\"]").click(function(e) {
+    //    e.preventDefault();
+    //    $(this).tab("show");
+    //});
 });

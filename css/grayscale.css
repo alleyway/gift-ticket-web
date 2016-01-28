@@ -579,9 +579,9 @@ footer {
     color: #7FAEC4;
 }
 
-form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #7FAEC4;
-}
+/*form .row:first-child .floating-label-form-group {*/
+    /*border-top: 1px solid #7FAEC4;*/
+/*}*/
 
 .alert-success {
     color: #4CAC53;

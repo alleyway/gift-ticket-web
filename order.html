@@ -47,35 +47,50 @@ title: Order Form - The Gift Ticket
                 </div>
             </div>
 
-            <div class="row control-group custom_order_group">
+            <div class="row control-group custom_order_group recipient_form">
                 <div class="col-xs-12">
                     <label class="order_option_title">
                         <input type="radio" name="where_to_send" value="recipient" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />Send directly to recipient</label>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
+                    <label>First Name</label>
+                    <input type="text" name="pre-first_name" class="form-control recipient_required" placeholder="First Name"  disabled
+                           data-validation-required-message="Enter first name">
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
+                    <label>Last Name</label>
+                    <input type="text" name="pre-last_name" class="form-control recipient_required" placeholder="Last Name" disabled
+                           data-validation-required-message="Enter last name">
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>Address</label>
-                    <input type="text" name="form_addr1" class="form-control recipient_required" placeholder="Address" id="form_addr1"
+                    <input type="text" name="pre-address1" class="form-control recipient_required" placeholder="Address" disabled
                            data-validation-required-message="Enter street address">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>Suite/Apt</label>
-                    <input type="text" name="form_addr2" class="form-control" placeholder="Suite/Apt." id="form_addr2">
+                    <input type="text" name="pre-address2" class="form-control" placeholder="Suite/Apt." disabled>
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>City</label>
-                    <input type="text" name="form_city" class="form-control recipient_required" placeholder="City" id="form_city">
+                    <input type="text" name="pre-city" class="form-control recipient_required" placeholder="City" disabled
+                           data-validation-required-message="Enter city">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>State</label>
-                    <input type="text" name="form_state" class="form-control recipient_required" placeholder="State" id="form_state">
+                    <input type="text" name="pre-state" class="form-control recipient_required" placeholder="State" disabled
+                           data-validation-required-message="Enter state">
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group col-xs-10 col-md-offset-2 floating-label-form-group controls">
                     <label>Postal Code</label>
-                    <input type="text" name="form_postal_code" class="form-control recipient_required" placeholder="Postal Code" id="form_postal_code">
+                    <input type="text" name="pre-zip" class="form-control recipient_required" placeholder="Postal Code" disabled
+                           data-validation-required-message="Enter postal code">
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
@@ -88,7 +103,7 @@ title: Order Form - The Gift Ticket
                         <span style="font-size: 36px; line-height: 0.8"> $4.95</span><br/><span style="font-size: smaller">(+ applicable state tax)</span>
                     </div>
                 </div>
-                <div class="col-md-6 text-center"">
+                <div class="col-md-6 text-center">
 
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="E3NHQF2A6SXFC">

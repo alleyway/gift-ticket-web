@@ -27,8 +27,8 @@ title: Order Form - The Gift Ticket
             </div>
 
             <div class="row">
-                <div class=" col-lg-11 text-center">
-                    <img src="img/MoneyMatch_Product_Photo_Unscratched.jpg" width="350">
+                <div class="col-lg-offset-2 col-lg-8 text-center">
+                    <img src="img/MoneyMatch_Product_Photo_Unscratched.jpg" style="width: 80%">
                 </div>
             </div>
 
@@ -42,7 +42,7 @@ title: Order Form - The Gift Ticket
                 <div class="col-xs-12">
                     <label class="order_option_title" >
                     <input type="radio" name="where_to_send" style="margin: 30px auto; margin-right: 10px; vertical-align: middle" />
-                    Get my address from PayPal</label>
+                    Send to my shipping address stored in PayPal</label>
                 </div>
             </div>
 
@@ -79,39 +79,45 @@ title: Order Form - The Gift Ticket
                 </div>
             </div>
 
+            <h3>3. Checkout</h3>
+            <div class="row checkout_box">
 
+                <div class="col-md-6 text-center">
+                    <div class="price">
+                        <span style="font-size: 36px; line-height: 0.8"> $4.95</span><br/><span style="font-size: smaller">(+ applicable state tax)</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center"">
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="E3NHQF2A6SXFC">
 
-            <div class="col-md-6">
+                        <input type="hidden" name="on0" value="Winning Amount:">
 
-                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <!--<INPUT TYPE="hidden" name="address_override" value="0">-->
-                    <input type="hidden" name="first_name" value="John">
-                    <input type="hidden" name="last_name" value="Doe">
-                    <input type="hidden" name="address1" value="9 Elm Street">
-                    <input type="hidden" name="address2" value="Apt 5">
-                    <input type="hidden" name="city" value="Berwyn">
-                    <input type="hidden" name="state" value="PA">
-                    <input type="hidden" name="zip" value="19312">
+                        <div id="checkout_elements">
 
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="E3NHQF2A6SXFC">
-                    <table>
-                        <tr><td><input type="hidden" name="on0" value="Winning Amount:">Winning Amount:</td></tr><tr><td><select name="os0">
-                        <option value="$25">$25 </option>
-                        <option value="$50">$50 </option>
-                        <option value="$100">$100 </option>
-                        <option value="$200">$200 </option>
-                        <option value="$500">$500 </option>
-                        <option value="$1000">$1000 </option>
-                    </select> </td></tr>
-                    </table>
-                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>
+                            <input type="hidden" name="os0" value="$25">
 
+                            <!--<INPUT TYPE="hidden" name="address_override" value="0">-->
+                            <input type="hidden" name="first_name" value="John">
+                            <input type="hidden" name="last_name" value="Doe">
+                            <input type="hidden" name="address1" value="9 Elm Street">
+                            <input type="hidden" name="address2" value="Apt 5">
+                            <input type="hidden" name="city" value="Berwyn">
+                            <input type="hidden" name="state" value="PA">
+                            <input type="hidden" name="zip" value="19312">
+                        </div>
 
+                        <div class="pay_button">
+                            <input type="image"
+                                   src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
+                                   border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1"
+                                 height="1">
+                        </div>
+                    </form>
+                </div>
             </div>
-
         </div>
 
         <div class="col-lg-3 visible-lg">

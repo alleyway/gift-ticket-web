@@ -529,6 +529,7 @@ footer {
     margin-bottom: 0;
     padding-bottom: .5em;
     border-bottom: 1px solid #7FAEC4;
+    float:right;
 }
 
 .floating-label-form-group:last-child {
@@ -644,20 +645,28 @@ form .row:first-child .floating-label-form-group {
 
 .gift_amounts {
     padding: 0px;
+    cursor: pointer;
 }
 .gift_amounts li {
     display: inline;
-    background-color: white;
+    background-color: #e1e1e1;
     float:left;
     text-align: center;
     border: 2px solid gray;
-    margin: 10px;
+    margin: 8px;
     padding: 12px;
     border-radius: 8px;
     width: 80px;
     font-size: 20px;
     font-weight: bold;
     color: #666;
+
+}
+
+li.amount_selected {
+    background-color: white;
+    border-color: #4CAC53;
+    color: #333;
 }
 
 .order_header {
@@ -676,7 +685,9 @@ form .row:first-child .floating-label-form-group {
 .custom_order_group {
     background-color: #e1e1e1;
     border-radius: 8px;
-    margin: 10px;
+    margin-top: 16px;
+    margin-left: 4px;
+    margin-right: 4px;
     border: 2px solid gray;
     color: gray;
 }
@@ -684,6 +695,10 @@ form .row:first-child .floating-label-form-group {
 .custom_order_group_selected {
     background-color: white;
     border-color: #4CAC53;
+}
+
+.custom_order_group_selected .order_option_title {
+    color: #333;
 }
 
 .order_option_title {
@@ -695,4 +710,25 @@ form .row:first-child .floating-label-form-group {
     width: 80%;
     padding-left: 10px;
 
+}
+
+.checkout_box {
+    border-radius: 8px;
+    border: 2px solid #4CAC53;
+    margin-top:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: white;
+}
+
+.price {
+    margin-top:18px;
+    height: 60px;
+    display:block;
+    color: #333;
+}
+
+.pay_button {
+    margin-top: 18px;
+    margin-bottom: 16px;
 }

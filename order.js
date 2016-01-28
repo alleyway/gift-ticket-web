@@ -12,6 +12,10 @@ $(function() {
 
 $(function () {
 
+    $(".gift_amounts li").on("click", function(e){
+        $(this).toggleClass("amount_selected");
+    });
+
     var once = false;
     $("input[name='where_to_send']").on("change", function (e) {
         if (!once) {

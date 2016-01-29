@@ -30,7 +30,7 @@ $(function () {
         return $('input:radio[name="where_to_send"]:checked').val() == "recipient";
     }
 
-    $(".gift_amounts li").on("click touchstart", function(e){
+    $(".gift_amounts li").on("click", function(e){
         $(".gift_amounts li").removeClass("amount_selected");
         $(this).addClass("amount_selected");
     });

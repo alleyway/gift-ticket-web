@@ -676,7 +676,7 @@ li.amount_selected {
 .sideinfo {
     padding: 10px;
     margin-top:180px;
-    border: 2px dashed lightgray;
+    border: 1px solid lightgray;
 }
 
 .sideinfo ul {
@@ -685,7 +685,7 @@ li.amount_selected {
 }
 .sideinfo li {
     display: block;
-    padding-left: 1.3em;
+    padding-left: 1.5em;
     font-size: 18px;
     margin-top: 12px;
 }
@@ -695,12 +695,34 @@ li.amount_selected {
 }
 
 .sideinfo li:before {
-    content: "\f006"; /* FontAwesome Unicode */
+    content: "\f005"; /* FontAwesome Unicode */
     font-family: FontAwesome;
     display: inline-block;
-    margin-left: -1.3em; /* same as padding-left set on li */
-    width: 1.3em; /* same as padding-left set on li */
-    color: red;
+    margin-left: -1.5em; /* same as padding-left set on li */
+    width: 1.5em; /* same as padding-left set on li */
+    color: #F6931D;
+    font-size: smaller;
+}
+
+ul.about-features {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-features li {
+    display: block;
+    padding-left: 1.5em;
+    margin-top: 10px;
+}
+
+.about-features li:before {
+    content: "\f005"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.5em; /* same as padding-left set on li */
+    width: 1.5em; /* same as padding-left set on li */
+    color: #F6931D;
+    font-size: smaller;
 }
 
 

@@ -69,16 +69,19 @@ $(function () {
         if (!amount) {
             e.preventDefault();
             alert("Please select an amount!");
+            return;
         }
 
         if (!$('input:radio[name="where_to_send"]:checked').val()){
             e.preventDefault();
             alert("Please choose where to send!");
+            return;
         }
 
         if (isRecipientSelected() && !$(".bfh-states").val()){
             e.preventDefault();
             alert("Please select a state!")
+            return;
         }
 
         $('<input type="hidden" />').attr({
@@ -100,13 +103,8 @@ $(function () {
                 }).appendTo(checkoutElements);
 
             });
-
         }
-
-
     });
-
-
 
 });
 

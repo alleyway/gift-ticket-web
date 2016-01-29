@@ -63,3 +63,11 @@ function createFunctionWithTimeout(callback, opt_timeout) {
         }
     }
 }
+
+
+var trackLink = function(category, action, label, url) {
+    ga('send', 'event', category, action, label, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+    });
+}

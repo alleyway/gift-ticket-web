@@ -28,7 +28,7 @@ logo-class: front_page_logo
                             <!--itemprop="price" content="4.95">4.95</span>-->
                     <!--</div>-->
                     <!-- - FREE shipping<br/>-->
-                    <div class="btn intro_buy_now"><a href="order.html">Order Now <i class="fa fa-angle-double-right"></i></a></div>
+                    <div class="btn intro_buy_now"><a href="order.html" onclick="trackLink('Order Button', 'clicked', 'intro', 'order.html'); return false;">Order Now <i class="fa fa-angle-double-right"></i></a></div>
 
                 </div>
             </div>
@@ -135,7 +135,8 @@ logo-class: front_page_logo
         <div class="col-lg-8 col-lg-offset-2">
             <h1>Give the gift of winning!</h1>
 
-            <div class="btn bottom_buy_now"><a href="order.html">Order Your Gift Ticket <i class="fa fa-angle-double-right"></i></a></div>
+            <div class="btn bottom_buy_now"><a href="order.html"
+                                               onclick="trackLink('Order Button', 'clicked', 'bottom', 'order.html'); return false;">Order Your Gift Ticket <i class="fa fa-angle-double-right"></i></a></div>
 
         </div>
     </div>

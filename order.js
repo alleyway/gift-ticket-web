@@ -18,9 +18,13 @@ $(function () {
         $("input[name='pre-address1']").val("123 Fake Lane");
         $("input[name='pre-address2']").val("A");
         $("input[name='pre-city']").val("Charlottesville");
-        $("input[name='pre-state']").val("VA");
+        //$("select[name='pre-state']").val("Virginia");
         $("input[name='pre-zip']").val("22903");
     }
+
+    $(".bfh-states").on("change", function(e){
+        $(this).css("color", "#333");
+    });
 
     function isRecipientSelected(){
         return $('input:radio[name="where_to_send"]:checked').val() == "recipient";
@@ -50,6 +54,8 @@ $(function () {
             $(this).prop("disabled", !recipientSelected);
         });
 
+        $(".bfh-states").prop("disabled", !recipientSelected);
+
     });
 
     $("#pp_form").on("submit", function(e){
@@ -60,20 +66,35 @@ $(function () {
 
         var amount = $(".amount_selected").text();
 
-        $('<input type="text" />').attr({
+        if (!amount) {
+            e.preventDefault();
+            alert("Please select an amount!");
+        }
+
+        if (!$('input:radio[name="where_to_send"]:checked').val()){
+            e.preventDefault();
+            alert("Please choose where to send!");
+        }
+
+        if (isRecipientSelected() && !$(".bfh-states").val()){
+            e.preventDefault();
+            alert("Please select a state!")
+        }
+
+        $('<input type="hidden" />').attr({
             name: 'os0',
             value: amount
         }).appendTo(checkoutElements);
 
         if (isRecipientSelected()){
-            $('<input type="text" />').attr({
+            $('<input type="hidden" />').attr({
                 name: 'address_override',
                 value: '1'
             }).appendTo(checkoutElements);
 
-            $(".recipient_form input.form-control").each(function(){
+            $(".recipient_form .form-control").each(function(){
 
-                $('<input type="text" />').attr({
+                $('<input type="hidden" />').attr({
                     name: $(this).attr("name").substring(4),
                     value: $(this).val()
                 }).appendTo(checkoutElements);
@@ -89,34 +110,3 @@ $(function () {
 
 });
 
-
-$(function() {
-
-    //$("input,textarea").jqBootstrapValidation({
-    //    preventSubmit: true,
-    //    submitError: function($form, event, errors) {
-    //        // additional error messages or events
-    //    },
-    //    submitSuccess: function($form, event) {
-    //        event.preventDefault(); // prevent default submit behaviour
-    //        // get values from FORM
-    //        var name = $("input#name").val();
-    //        var email = $("input#email").val();
-    //        var phone = $("input#phone").val();
-    //        var message = $("textarea#message").val();
-    //        var firstName = name; // For Success/Failure Message
-    //        // Check for white space in name for Success/Fail message
-    //        if (firstName.indexOf(' ') >= 0) {
-    //            firstName = name.split(' ').slice(0, -1).join(' ');
-    //        }
-    //    },
-    //    filter: function() {
-    //        return $(this).is(":visible");
-    //    },
-    //});
-    //
-    //$("a[data-toggle=\"tab\"]").click(function(e) {
-    //    e.preventDefault();
-    //    $(this).tab("show");
-    //});
-});

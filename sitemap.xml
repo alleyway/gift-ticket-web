@@ -12,7 +12,9 @@
             <image:title>Gift Ticket</image:title>
         </image:image>
     </url>
-
+    <url>
+        <loc>http://thegiftticket.com/order.html</loc>
+    </url>
     <url>
         <loc>http://thegiftticket.com/about.html</loc>
     </url>

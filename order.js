@@ -11,6 +11,7 @@ $(function() {
 
 
 $(function () {
+    fbq('track', 'Lead');
 
     if (false){
         $("input[name='pre-first_name']").val("Michael");

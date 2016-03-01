@@ -71,6 +71,8 @@ a:focus {
 }
 
 .navbar-custom {
+    padding-top: 8px;
+
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
@@ -109,11 +111,6 @@ a:focus {
     }
     .front_page_logo {
         visibility: hidden;
-    }
-}
-@media(min-width:970px) {
-    .navbar-brand {
-        padding: 14px;
     }
 }
 
@@ -460,6 +457,7 @@ body {
     border: 2px solid white;
     font-weight: 700;
     padding: 6px 30px;
+    background-color: #4CAF50;
 }
 .intro_buy_now a {
     color: white;
@@ -812,3 +810,32 @@ ul.about-features {
     color: #999;
 }
 
+
+.box {
+    margin-top: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 15px 30px 15px 30px;
+    margin-bottom: 10px;
+}
+
+@media (min-width:800px) {
+    .box {
+        border: 1px solid #cccccc;
+    }
+}
+
+.activation {
+    border-radius: 4px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 6px;
+
+}
+
+#activation_code {
+    letter-spacing: 1px;
+}

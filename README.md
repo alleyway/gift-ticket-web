@@ -1,8 +1,6 @@
-# sgc
+# GT-Web
 
 
-We can exclude pages from sitemap
+Frontend website for <a href="https://thegiftticket.com">The Gift Ticket</a>: The *fun* way to gift money.
 
-https://github.com/jekyll/jekyll-sitemap#exclusions
 
-sitemap: false

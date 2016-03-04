@@ -533,6 +533,55 @@ footer {
     color: #4CAC53;
 }
 
+/* start activation */
+.floating-act-label-form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #999;
+}
+
+.floating-act-label-form-group:last-child {
+    border-bottom: none;
+}
+
+.floating-act-label-form-group input,
+.floating-act-label-form-group textarea {
+    z-index: 1;
+    position: relative;
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5em;
+    background: 0 0;
+    box-shadow: none!important;
+    resize: none;
+    color: #333;
+}
+
+.floating-act-label-form-group label {
+    display: block;
+    z-index: 0;
+    position: relative;
+    color: #3c3c3c;
+    top: 2em;
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.764705882em;
+    vertical-align: middle;
+    vertical-align: baseline;
+    opacity: 0;
+    -webkit-transition: top .3s ease,opacity .3s ease;
+    -moz-transition: top .3s ease,opacity .3s ease;
+    -ms-transition: top .3s ease,opacity .3s ease;
+    transition: top .3s ease,opacity .3s ease;
+}
+
+
+
+/* end activation */
+
 /*contact*/
 .help-block {
     color:#a94442;
@@ -611,6 +660,11 @@ footer {
 
 
 /*end contact*/
+
+
+
+
+
 .contact-send-button {
     width: 156px;
     background-color: #4CAC53;
@@ -814,7 +868,6 @@ ul.about-features {
 .box {
     margin-top: 10px;
     background-color: #ffffff;
-    text-align: center;
     border-radius: 4px;
     padding: 15px 30px 15px 30px;
     margin-bottom: 10px;
@@ -836,6 +889,15 @@ ul.about-features {
 
 }
 
-#activation_code {
+#activationCode {
     letter-spacing: 1px;
+}
+
+#activation_button {
+    background-color: #207ce7;
+    color: white;
+    border-style: none;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: normal;
 }

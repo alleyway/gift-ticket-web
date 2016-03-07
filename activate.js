@@ -1,6 +1,16 @@
 $(function() {
 
+
     var BASE_URL = "https://api-staging.thegiftticket.com/api";
+
+    if (window.location.href.indexOf('localhost') > 0){
+        BASE_URL = "http://localhost:8080/api";
+    }
+
+    if (window.location.href.indexOf('thegiftticket.com')) {
+        BASE_URL = "https://api.thegiftticket.com/api";
+    }
+
 
     $("body").on("input propertychange", ".floating-act-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
@@ -77,8 +87,8 @@ $(function() {
             },
             async: true,
             dataType: "json",
-            success: function(){
-                alert("success");
+            success: function(data){
+                alert(data.message);
             }
         });
 

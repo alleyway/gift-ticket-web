@@ -1,5 +1,5 @@
 /*
-International Telephone Input v7.0.2
+International Telephone Input v7.1.1
 https://github.com/Bluefieldscom/intl-tel-input.git
 */
 // wrap in UMD - see https://github.com/umdjs/umd/blob/master/jqueryPluginCommonjs.js
@@ -21,7 +21,7 @@ https://github.com/Bluefieldscom/intl-tel-input.git
         // typing digits after a valid number will be added to the extension part of the number
         allowExtensions: false,
         // automatically format the number according to the selected country
-        autoFormat: true,
+        autoFormat: false,
         // if there is just a dial code in the input: remove it on blur, and re-add it on focus
         autoHideDialCode: true,
         // add or remove input placeholder with an example number for the selected country
@@ -910,8 +910,8 @@ https://github.com/Bluefieldscom/intl-tel-input.git
                 this._closeDropdown();
             }
             this._updateDialCode(listItem.attr("data-dial-code"), true);
-            // always fire the change event as even if nationalMode=true (and we haven't updated the input val), the system as a whole has still changed - see country-sync example. think of it as making a selection from a select element.
-            this.telInput.trigger("change");
+            // trigger a custom event as even in nationalMode the state has changed
+            this.telInput.trigger("country-change");
             // focus the input
             this.telInput.focus();
             // fix for FF and IE11 (with nationalMode=false i.e. auto inserting dial code), who try to put the cursor at the beginning the first time
@@ -1186,7 +1186,7 @@ https://github.com/Bluefieldscom/intl-tel-input.git
         }
     };
     // version
-    $.fn[pluginName].version = "7.0.2";
+    $.fn[pluginName].version = "7.1.1";
     // Tell JSHint to ignore this warning: "character may get silently deleted by one or more browsers"
     // jshint -W100
     // Array of country objects for the flag dropdown.

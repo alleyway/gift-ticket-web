@@ -9,7 +9,7 @@
     "wowjs": "~1.1.2",
     "fontawesome": "~4.5.0",
     "jquery.inputmask": "3.2.7",
-    "intl-tel-input": "7.0.2"
+    "intl-tel-input": "~7.1.0"
   },
   "private": true
 }

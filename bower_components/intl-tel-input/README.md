@@ -25,12 +25,14 @@ You can view a live demo and some examples of how to use the various options her
 
 
 ## Features
+* Automatically select the user's current country using an IP lookup
 * Automatically format the number as the user types
 * Automatically set the input placeholder to an example number for the selected country
 * Navigate the country dropdown by typing a country's name, or using up/down keys
-* Selecting a country from the dropdown will update the dial code in the input
-* Typing a different dial code will automatically update the displayed flag
-* Dropdown appears above or below the input depending on available space/scroll position
+* Handle phone number extensions
+* The user types their national number and the plugin gives you the full standardized international number
+* Full validation, including specific error types
+* Retina flag icons
 * Lots of initialisation options for customisation, as well as public methods for interaction
 
 
@@ -78,7 +80,8 @@ Type: `Boolean` Default: `false`
 When `autoFormat` is enabled, this option will support formatting extension numbers e.g. "+1 (702) 123-1234 ext. 12345".
 
 **autoFormat**  
-Type: `Boolean` Default: `true`  
+Type: `Boolean` Default: `false`  
+_Note this option is currently not recommended, due to a [known UX issue](https://github.com/jackocnr/intl-tel-input/issues/322)._  
 Format the number on each keypress according to the country-specific formatting rules. This will also prevent the user from entering invalid characters (triggering a red flash in the input - see [Troubleshooting](#troubleshooting) to customise this). Requires the `utilsScript` option.
 
 **autoHideDialCode**  
@@ -324,4 +327,9 @@ If when building, you get an error in the "exec:evenizer" task, you may need to 
 * Formatting/validation/example number code from [libphonenumber](http://libphonenumber.googlecode.com)
 * Lookup user's country using [ipinfo.io](http://ipinfo.io)
 * Feature contributions are listed in the wiki: [Contributions](https://github.com/jackocnr/intl-tel-input/wiki/Contributions)
+
+
+## Links
 * List of [sites using intl-tel-input](https://github.com/jackocnr/intl-tel-input/wiki/Sites-using-intl-tel-input)
+* List of [integrations with intl-tel-input](https://github.com/jackocnr/intl-tel-input/wiki/Integrations)
+* Android native port: [IntlPhoneInput](https://github.com/Rimoto/IntlPhoneInput)

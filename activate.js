@@ -13,6 +13,7 @@ $(function() {
     var mobileEntry = $("#mobileEntry");
 
     mobileEntry.intlTelInput({
+        onlyCountries: ["us"],
         utilsScript: "/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"
     });
 

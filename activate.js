@@ -1,4 +1,17 @@
+
+
+
 $(function() {
+
+    $.urlParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null){
+            return null;
+        }
+        else{
+            return results[1] || 0;
+        }
+    };
 
 
     var BASE_URL = "https://api-staging.thegiftticket.com/api";
@@ -27,9 +40,12 @@ $(function() {
         utilsScript: "/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"
     });
 
-    var mobile = $("#mobile");
+    var mobile = $.urlParam("mobile");
+    if (mobile) {
+        mobileEntry.intlTelInput("setNumber", mobile);
+    }
 
-    mobileEntry.intlTelInput("setNumber", mobile.val());
+
 
     var activationCode = $('#activationCode');
 

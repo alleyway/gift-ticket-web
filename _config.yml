@@ -7,3 +7,6 @@ url: http://thegiftticket.com/
 # seems that this plugin picks up other .html files under bower components
 #gems:
 #  - jekyll-sitemap
+
+gems:
+  - jekyll-seo-tag

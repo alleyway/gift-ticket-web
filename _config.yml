@@ -4,6 +4,9 @@ name: The Gift Ticket
 
 url: http://thegiftticket.com/
 
+twitter:
+  username: thegiftticket
+
 # seems that this plugin picks up other .html files under bower components
 #gems:
 #  - jekyll-sitemap

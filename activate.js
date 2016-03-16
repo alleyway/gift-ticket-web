@@ -91,7 +91,7 @@ $(function() {
     activationCode.attr('autocorrect', 'off');
     activationCode.attr('autocapitalize', 'off');
 
-    if (true){
+    if (false){
         $("input[name='activationCode']").val("555-555");
         $("input[name='name']").val("Michael Lake");
         $("input[name='email']").val("mlake900+test@gmail.com");

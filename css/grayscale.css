@@ -586,6 +586,8 @@ footer {
 .help-block {
     color:#a94442;
     text-align: left;
+    font-style: italic;
+    font-size: 16px;
 }
 .floating-label-form-group {
     position: relative;

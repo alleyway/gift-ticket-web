@@ -468,13 +468,13 @@ body {
 }
 
 .bottom_buy_now {
+    color: white;
     margin-top:60px;
     margin-bottom: 60px;
-    border: 2px solid white;
     font-weight: 700;
-    padding: 12px 30px;
-    background-color: #F6931D;
-    font-size: 14px;
+    padding: 30px 10px;
+    background-color: #4CAF50;
+    font-size: 20px;
 }
 .bottom_buy_now a {
     color: white;
@@ -691,7 +691,7 @@ footer {
 .about-features {
     font-size: 18px;
     line-height: 1.5;
-    margin: 60px auto;
+    margin: 40px auto;
     text-align: left;
     display: inline-block;
 }

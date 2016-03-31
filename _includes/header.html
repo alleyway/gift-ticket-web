@@ -44,12 +44,20 @@
     <noscript><img height="1" width="1" style="display:none"
                    src="https://www.facebook.com/tr?id=214951935518214&ev=PageView&noscript=1"
     /></noscript>
+    <meta name="p:domain_verify" content="4efdf139de6e0b4dd3f811aa4f240ade"/>
     <!-- End Facebook Pixel Code -->
     {% seo %}
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=994582807295629";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- Navigation -->
 <nav class="navbar navbar-custom {{ page.navstyle }}" role="navigation">
     <div class="container">

@@ -468,6 +468,7 @@ body {
 }
 
 .bottom_buy_now {
+    width: 90%;
     color: white;
     margin-top:60px;
     margin-bottom: 60px;
@@ -475,13 +476,19 @@ body {
     padding: 30px 10px;
     background-color: #4CAF50;
     font-size: 20px;
+    max-width: 500px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
 }
-.bottom_buy_now a {
+a.bottom_buy_now  {
     color: white;
     letter-spacing: 1px;
 }
-.bottom_buy_now a:hover {
-    text-decoration: underline;
+a.bottom_buy_now:hover {
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
 }
 
 .greybackground {

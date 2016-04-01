@@ -52,17 +52,6 @@ $(function () {
     floater.sticky({topSpacing:100,
         getWidthFrom: "#share-menu"});
 
-    // $(document).scroll(function(e) {
-    //
-    //     console.log('fired' + $(document).scrollTop());
-    //     if (this.scrollTop > 100) {
-    //         floater.addClass("is-sticky");
-    //     } else {
-    //         floater.removeClass("is-sticky");
-    //     }
-    //
-    // });
-
 
 });
 

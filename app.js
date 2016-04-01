@@ -6,5 +6,6 @@
 {% include_relative bower_components/bootstrap/dist/js/bootstrap.min.js %}
 {% include_relative bower_components/jquery.easing/js/jquery.easing.min.js %}
 {% include_relative bower_components/jquery-sticky/jquery.sticky.js %}
+{% include_relative bower_components/jqBootstrapValidation/dist/jqBootstrapValidation-1.3.7.min.js %}
 {% include_relative main.js %}
 

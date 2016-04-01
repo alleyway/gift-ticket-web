@@ -1019,21 +1019,12 @@ ul.about-features {
     min-width: 100px;
     padding: 10px 0px;
     width: 100px;
-    margin-left: -115px;
+    margin-left: -130px;
     float: left;
     clear:both;
     border-radius: 8px;
 }
 
-@media (max-width: 880px) {
-    .cos-share-floater {
-        position: relative;
-        float: none;
-        display: block;
-        width: 100%;
-        margin: -40px 0 0 0;
-    }
-}
 
 .cos-share-floater.is-sticky {
     width: 100px;

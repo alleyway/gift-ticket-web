@@ -10,7 +10,8 @@
     "fontawesome": "~4.5.0",
     "jquery.inputmask": "3.2.7",
     "intl-tel-input": "~7.1.0",
-    "spin.js": "~2.3.2"
+    "spin.js": "~2.3.2",
+    "jquery-sticky": "1.0.3"
   },
   "private": true
 }

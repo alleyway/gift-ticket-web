@@ -459,12 +459,15 @@ body {
     padding: 6px 30px;
     background-color: #4CAF50;
 }
-.intro_buy_now a {
+a.intro_buy_now  {
     color: white;
     letter-spacing: 1px;
 }
-.intro_buy_now a:hover {
-    text-decoration: underline;
+a.intro_buy_now:hover {
+    color:#4CAF50;
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+    background-color: white;
 }
 
 .bottom_buy_now {
@@ -948,6 +951,9 @@ ul.about-features {
 /*Change icons circle size and color here*/
 .social-icons.icon-circle .fa{
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+
 }
 .social-icons .fa:hover, .social-icons .fa:active {
     color: #FFF;
@@ -996,3 +1002,44 @@ ul.about-features {
 .social-icons .fa-windows{background-color:#12B6F3;}
 .social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;}
 .social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
+
+
+.share_buttons li {
+    margin: 15px;
+
+}
+
+.cos-share-floater {
+    background: white;
+    border: 1px solid gray;
+    margin: 0;
+    position:absolute;
+    display: block;
+    z-index: 1000000;
+    min-width: 100px;
+    padding: 10px 0px;
+    width: 100px;
+    margin-left: -115px;
+    float: left;
+    clear:both;
+    border-radius: 8px;
+}
+
+@media (max-width: 880px) {
+    .cos-share-floater {
+        position: relative;
+        float: none;
+        display: block;
+        width: 100%;
+        margin: -40px 0 0 0;
+    }
+}
+
+.cos-share-floater.is-sticky {
+    width: 100px;
+}
+
+#share-menu-sticky-wrapper {
+    position:absolute;
+    top:-330px;
+}

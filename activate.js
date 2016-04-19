@@ -75,7 +75,6 @@ $(function() {
     }
 
     var activationButton = $("#activation_button");
-    var activationForm = $("#activation_form");
 
     activationButton.on("click", function(e){
         e.preventDefault();
@@ -121,7 +120,8 @@ $(function() {
                         .append('</div>');
 
                     //clear all fields
-                    //$('#contactForm').trigger("reset");
+                    $('#activation_form').trigger("reset");
+                    
                     
                 } else {
                     // Fail message

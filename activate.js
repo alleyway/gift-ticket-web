@@ -77,14 +77,15 @@ $(function() {
     var activationButton = $("#activation_button");
     var activationForm = $("#activation_form");
 
-    activationForm.on("submit", function(e){
+    activationButton.on("click", function(e){
+        e.preventDefault();
         
         $('.box').spin('giftticket');
         activationButton.prop('disabled', true);
         
         var activationCode = $("#activationCode");
         activationCode.parent().toggleClass("floating-label-form-group-with-value", !! activationCode.val());
-        e.preventDefault();
+        
 
         var activationRequest = {
             "activationCode": activationCode.val(),

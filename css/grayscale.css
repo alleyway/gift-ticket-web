@@ -1051,6 +1051,7 @@ ul.about-features {
     /* float: left; */
     margin: 30px auto;
     cursor: pointer;
+    -webkit-transition: all 0.5s ease-out;
 }
 /*.card:before {*/
     /*content: 'test';*/
@@ -1106,6 +1107,11 @@ ul.about-features {
 .card:hover .front {
     -webkit-transform: rotateY(-35deg);
 }
+
+.card:active {
+    -webkit-transform: translateX(100px);
+}
+
 .card:active .front{
     -webkit-transform: rotateY(-165deg);
 }

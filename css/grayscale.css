@@ -34,6 +34,10 @@ h6 {
     color: #4CAF50;
 }
 
+#pp_form h3 {
+    margin-top: 65px;
+}
+
 h4 {
     color: #7FAEC4;
     font-size: 2em;
@@ -1046,24 +1050,22 @@ ul.about-features {
     width: 200px;
     height: 280px;
     position: relative;
-    -webkit-perspective: 700;
+    -webkit-perspective: 1200;
 
     /* float: left; */
     margin: 30px auto;
     cursor: pointer;
-    -webkit-transition: all 0.5s ease-out;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
 }
-/*.card:before {*/
-    /*content: 'test';*/
-    /*position: absolute;*/
-    /*width: 150px;*/
-    /*height: 210px;*/
-    /*line-height: 150px;*/
-    /*text-align: center;*/
-    /*top: 0;*/
-    /*left: -180px;*/
-    /*color: #222;*/
-/*}*/
+.card:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 280px;
+    top: 0;
+    left: -100px;
+}
 
 .card:hover .face {
     -webkit-transition: all 0.3s ease-out;
@@ -1081,6 +1083,7 @@ ul.about-features {
     -webkit-transform-origin: 0 0;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: #efefef;
 }
 
 .face:after {
@@ -1090,33 +1093,42 @@ ul.about-features {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: linear-gradient(to right, #efefef, #f4f4f4);
+    background: linear-gradient(to right, #efefef, #f9f9f9);
+    border: 1px solid #adadad;
+
     -webkit-transform: rotateY( 180deg );
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
 }
+
 .front {
     -webkit-transform: rotateY(-20deg);
     z-index: 2;
+    border: 1px solid #B4B4B4;
 }
+
 .back {
     background: #9dcc78;
     -webkit-transform: rotateY(0deg);
     z-index: 1;
-}
-.card:hover .front {
-    -webkit-transform: rotateY(-35deg);
-}
-
-.card:active {
-    -webkit-transform: translateX(100px);
+    border: 1px solid #B4B4B4;
+    border-left: none;
 }
 
-.card:active .front{
-    -webkit-transform: rotateY(-165deg);
+/*.card:hover .front {*/
+    /*-webkit-transform: rotateY(-35deg);*/
+/*}*/
+.card:hover {
+    /*-webkit-transform: translateX(20px);*/
 }
-.card:active .back {
-    -webkit-transform: rotateY(-15deg);
+
+.card:hover .front{
+    -webkit-transform: rotateY(-95deg);
+
+}
+.card:hover .back {
+    /*-webkit-transform: rotateY(-15deg);*/
+
 }
 
 /* end cards */

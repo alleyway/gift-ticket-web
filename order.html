@@ -37,16 +37,16 @@ title: Order Form - The Gift Ticket
 
 
 
-            <div class="row control-group">
+            <div class="row control-group greeting-cards">
                 <div class="col-lg-6">
 
                     <div class="custom_order_group text-center" style="height: 392px;">
                         <label for="card_none">
-                            <div style="width: 200px;height: 280px; font-size: 20px; line-height: 280px; cursor: pointer">
+                            <div style="width: 200px;height: 330px; font-size: 20px; line-height: 280px; cursor: pointer">
                                 (no greeting card)
                             </div>
                             </label><br/>
-                        <input id="card_none" type="radio" name="card_choice" value="none" style="margin: 15px auto;"/>
+                        <input id="card_none" type="radio" name="card_choice" value="None" style="margin: 15px auto;"/>
 
                     </div>
 
@@ -65,7 +65,7 @@ title: Order Form - The Gift Ticket
                                          style="width: 10%; margin-left: -70px; margin-top: -30px;">
                                 </div>
                             </div>
-                            <input type="radio" id="card_karma" name="card_choice" value="karma"
+                            <input type="radio" id="card_karma" name="card_choice" value="Karma"
                                    style="margin: 15px auto"/> &nbsp; add $1.00
                         </label>
                     </div>
@@ -77,7 +77,7 @@ title: Order Form - The Gift Ticket
             <p style="color: #5e5e5e" class="text-center"><em>More greeting card options coming soon!</em></p>
 
             <h3>2. Tell Us Where to Send It</h3>
-
+            <div class="shipping-option">
             <div class="row custom_order_group">
                 <div class="col-xs-12">
 
@@ -188,26 +188,54 @@ title: Order Form - The Gift Ticket
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
-
+            </div>
             <h3>3. Checkout</h3>
             <div class="row checkout_box">
 
                 <div class="col-md-6 text-center">
                     <div class="price">
-                        <span style="font-size: 36px; line-height: 0.8"> $4.95</span><br/><span style="font-size: smaller">(+ applicable state tax)</span>
+                        <div id="order_pre-tax" style="font-size: 36px; line-height: 0.8; margin: 6px;">$4.95</div><span style="font-size: smaller">(+ applicable state tax)</span>
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
+
+                    <!--
+
+
+<table>
+<tr><td>Greeting Card</td></tr><tr><td><select name="os0">
+	<option value="None">None $4.95 USD</option>
+	<option value="Karma">Karma $5.95 USD</option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Winning Amount:">Winning Amount:</td></tr><tr><td><select name="os1">
+	<option value="$25">$25 </option>
+	<option value="$50">$50 </option>
+	<option value="$100">$100 </option>
+	<option value="$200">$200 </option>
+	<option value="$500">$500 </option>
+	<option value="$1000">$1000 </option>
+</select> </td></tr>
+</table>
+
+
+
+</form>
+
+
+                    -->
+
 
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="DSAP33XVGGKKC">
                         <input type="hidden" name="custom" value="source=website">
                         <!--<input type="hidden" name="notify_url" value="https://cash2pass.com/api/update">-->
-                        <input type="hidden" name="on0" value="Winning Amount:">
 
+                        <input type="hidden" name="on0" value="Greeting Card">
+                        <input type="hidden" name="on1" value="Winning Amount:">
+
+                        <input type="hidden" name="currency_code" value="USD">
                         <div id="checkout_elements">
 
-                            <!--<input type="hidden" name="os0" value="$25">-->
 
                             <!--<INPUT TYPE="hidden" name="address_override" value="0">-->
                             <input type="hidden" name="first_name" value="John">

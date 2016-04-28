@@ -39,11 +39,11 @@ $(function () {
     var once = false;
     $("input[name='where_to_send']").on("change", function (e) {
         if (!once) {
-            $(this).parents(".custom_order_group").addClass("custom_order_group_selected");
+            $(this).parents(".shipping-option .custom_order_group").addClass("custom_order_group_selected");
             once = true;
         }
         else
-            $(".custom_order_group").toggleClass("custom_order_group_selected");
+            $(".shipping-option .custom_order_group").toggleClass("custom_order_group_selected");
 
         var recipientSelected = isRecipientSelected();
 
@@ -59,8 +59,27 @@ $(function () {
 
     });
 
-    $("#pp_form").on("submit", function(e){
 
+    var onceCard = false;
+    $("input[name='card_choice']").on("change", function (e) {
+        if (!onceCard) {
+            $(this).parents(".greeting-cards .custom_order_group").addClass("custom_order_group_selected");
+            onceCard = true;
+        }
+        else
+            $(".greeting-cards .custom_order_group").toggleClass("custom_order_group_selected");
+
+
+        if ($(this).val() == "None") {
+            $("#order_pre-tax").text("$4.95");
+        } else {
+            $("#order_pre-tax").text("$5.95");
+        }
+
+
+    });
+
+    $("#pp_form").on("submit", function(e){
 
         var checkoutElements = $("#checkout_elements");
         checkoutElements.empty();
@@ -70,6 +89,13 @@ $(function () {
         if (!amount) {
             e.preventDefault();
             alert("Please select an amount!");
+            return;
+        }
+
+
+        if (!$('input:radio[name="card_choice"]:checked').val()){
+            e.preventDefault();
+            alert("Please choose a whether you'd like a card!");
             return;
         }
 
@@ -84,9 +110,15 @@ $(function () {
             alert("Please select a state!")
             return;
         }
+        
 
         $('<input type="hidden" />').attr({
             name: 'os0',
+            value: $("input[name='card_choice']:checked").val()
+        }).appendTo(checkoutElements);
+
+        $('<input type="hidden" />').attr({
+            name: 'os1',
             value: amount
         }).appendTo(checkoutElements);
 

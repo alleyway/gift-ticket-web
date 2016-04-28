@@ -1034,3 +1034,66 @@ ul.about-features {
     position:absolute;
     top:-330px;
 }
+
+.debug {
+    background-color: rgba(125,0,0,.4);
+}
+
+
+/* cards */
+
+.card {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    -webkit-perspective: 700;
+
+    /* float: left; */
+    margin: 30px auto;
+    cursor: pointer;
+}
+.card:before {
+    content: 'Mouse down for detail ⤏';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+    top: 0;
+    left: -180px;
+    color: #222;
+}
+
+.card:hover .face {
+    -webkit-transition: all 0.3s ease-out;
+}
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: visible;
+    -webkit-transition: all 0.5s ease-out;
+    -webkit-transform-origin: 0 0;
+}
+.front {
+    -webkit-transform: rotateY(-20deg);
+    z-index: 2;
+}
+.back {
+    background: #9dcc78;
+    -webkit-transform: rotateY(0deg);
+    z-index: 1;
+}
+.card:hover .front {
+    -webkit-transform: rotateY(-35deg);
+}
+.card:active .front{
+    -webkit-transform: rotateY(-165deg);
+}
+.card:active .back {
+    -webkit-transform: rotateY(-15deg);
+}
+
+/* end cards */

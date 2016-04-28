@@ -1,7 +1,11 @@
 User-agent: *
 Sitemap: https://thegiftticket.com/sitemap.xml
 Disallow: /ebay_content.html
+Disallow: /ebay_content
+Disallow: /index_old
 Disallow: /index_old.html
+Disallow: /greeting_card.html
+Disallow: /greeting_card
 Disallow: /README.md
 Disallow: /bower_components/*
 

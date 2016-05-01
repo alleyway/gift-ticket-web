@@ -27,55 +27,47 @@ title: Order Form - The Gift Ticket
             </div>
 
             <div class="row">
-                <div class="col-lg-offset-2 col-lg-8 text-center">
-                    <img src="img/MoneyMatch_Product_Photo_Unscratched.jpg" style="width: 80%; margin: 30px auto;">
+                <div class="col-lg-offset-1 col-lg-10 text-center">
+                    <img id="product_photo" src="img/MoneyMatch_Product_Photo_Unscratched.jpg" style="width: 80%; margin: 30px auto;">
                 </div>
             </div>
 
 
             <h3>2. Choose Greeting Card</h3>
 
+            <div class="greeting-card-group">
+                <input id="card_none" type="radio" name="card_choice" value="None"
+                       style="margin: 15px; margin-left: 15px; margin-right: 6px;"/>
+                <label for="card_none">
+                    No greeting card
+                </label>
 
-
-            <div class="row control-group greeting-cards">
-                <div class="col-lg-6">
-
-                    <div class="custom_order_group text-center" style="height: 392px;">
-                        <label for="card_none">
-                            <div style="width: 200px;height: 330px; font-size: 20px; line-height: 280px; cursor: pointer">
-                                (no greeting card)
-                            </div>
-                            </label><br/>
-                        <input id="card_none" type="radio" name="card_choice" value="None" style="margin: 15px auto;"/>
-
+                <div class="row control-group greeting-cards">
+                    <div class="col-lg-6">
+                        <div class="custom_order_group text-center" style="height: 392px;">
+                            <label for="card_karma">
+                                <div class="card">
+                                    <div class='front face'
+                                         style="background-image: url('img/greeting_cards/karma/Karma_Greeting_Card_front-01.svg')">
+                                    </div>
+                                    <div class="back face"
+                                         style="background-image: url('img/greeting_cards/karma/Karma_Greeting_Card_back-02.svg')">
+                                        <img src="img/greeting_cards/karma/Karma_inside_image.png" style="width: 100%">
+                                        <img src="img/greeting_cards/karma/1952-wheat-penny.png"
+                                             style="width: 10%; margin-left: -70px; margin-top: -30px;">
+                                    </div>
+                                </div>
+                                <input type="radio" id="card_karma" name="card_choice" value="Karma"
+                                       style="margin: 15px auto"/> <span>&nbsp; add $1.00</span>
+                            </label>
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-lg-6">
-                    <div class="custom_order_group text-center" style="height: 392px;">
-                        <label for="card_karma">
-                            <div class="card">
-                                <div class='front face'
-                                     style="background-image: url('img/greeting_cards/karma/Karma_Greeting_Card_front-01.svg')">
-                                </div>
-                                <div class="back face"
-                                     style="background-image: url('img/greeting_cards/karma/Karma_Greeting_Card_back-02.svg')">
-                                    <img src="img/greeting_cards/karma/Karma_inside_image.png" style="width: 100%">
-                                    <img src="img/greeting_cards/karma/1952-wheat-penny.png"
-                                         style="width: 10%; margin-left: -70px; margin-top: -30px;">
-                                </div>
-                            </div>
-                            <input type="radio" id="card_karma" name="card_choice" value="Karma"
-                                   style="margin: 15px auto"/> &nbsp; add $1.00
-                        </label>
-                    </div>
-                </div>
 
+                <p></p>
+                <p style="color: #5e5e5e" class="text-center"><em>More greeting card options coming soon!</em></p>
             </div>
-
-            <p></p>
-            <p style="color: #5e5e5e" class="text-center"><em>More greeting card options coming soon!</em></p>
-
             <h3>2. Tell Us Where to Send It</h3>
             <div class="shipping-option">
             <div class="row custom_order_group">

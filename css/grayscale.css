@@ -1132,3 +1132,15 @@ ul.about-features {
 }
 
 /* end cards */
+
+.greeting-card-group label {
+    color: gray;
+}
+
+.greeting-card-group input[type="radio"]:checked + label {
+    color: #000000;
+}
+
+.greeting-card-group input[type="radio"]:checked + span {
+    color: #000000;
+}

@@ -34,6 +34,10 @@ $(function () {
     $(".gift_amounts li").on("click", function(e){
         $(".gift_amounts li").removeClass("amount_selected");
         $(this).addClass("amount_selected");
+
+        var amount = $(this).text().replace(/\$/, '');
+        $("#product_photo").attr("src", "img/MoneyMatch_Product_Photo_" + amount + ".jpg");
+
     });
 
     var once = false;

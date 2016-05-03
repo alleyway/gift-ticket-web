@@ -5,18 +5,33 @@ description: Better than a gift card - give a Gift Ticket instead!
 logo-class: front_page_logo page-scroll
 
 seo:
-    type: Website
+    type: Product
 image:
     twitter: img/Gift_Ticket_Social_Media_Share_Twitter.png
     facebook: img/Gift_Ticket_Social_Media_Share_Facebook.png
-    width: 1200
     height: 630
+    width: 1200
+
 ---
 
 <!--
  Twitter image: recommended 600x330
  Facebook image: recommended 1200x630
 -->
+
+<!-- BEGIN additional head tags -->
+<meta property="og:type" content="product" />
+<!-- END additional head tags -->
+{% include navigation.html %}
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=994582807295629";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Intro Header -->
 <header class="content-section intro" style="padding-top: 0; border-bottom: 1px solid darkgray">

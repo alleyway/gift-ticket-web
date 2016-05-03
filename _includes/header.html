@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US">
 
 <head>
 
@@ -47,54 +47,4 @@
     <meta name="p:domain_verify" content="4efdf139de6e0b4dd3f811aa4f240ade"/>
     <!-- End Facebook Pixel Code -->
     {% seo %}
-</head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=994582807295629";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Navigation -->
-<nav class="navbar navbar-custom {{ page.navstyle }}" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand {{ page.logo-class }}" title="The Gift Ticket" href="./#page-top">
-                <img src="img/nav_logo.svg" alt="The Gift Ticket" height="40px">
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-            <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                <li class="hidden">
-                    <a href="./#page-top"></a>
-                </li>
-
-                <li>
-                    <a class="page-scroll" title="How the Gift Ticket works" href="./#how">How this Works</a>
-                </li>
-                <li>
-                    <a href="./order" title="Order a Gift Ticket now" onclick="trackLink('Order Button', 'clicked', 'nav', 'order.html'); return false;">Order Gift Ticket</a>
-                </li>
-                <li>
-                    <!--<a class="page-scroll" href="./#about">What is it?</a>-->
-                    <a href="./activate" title="Activate a Gift Ticket">Activate A Ticket</a>
-                </li>
-                <!--<li>-->
-                <!--<a class="page-scroll" href="#contact">Contact</a>-->
-                <!--</li>-->
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>

@@ -6,31 +6,31 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://thegiftticket.com/</loc>
+        <loc>https://thegiftticket.com/</loc>
         <image:image>
             <image:loc>https://thegiftticket.com/img/pinterest_share.png</image:loc>
             <image:title>Gift Ticket</image:title>
         </image:image>
     </url>
     <url>
-        <loc>http://thegiftticket.com/activate</loc>
+        <loc>https://thegiftticket.com/activate</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/order</loc>
+        <loc>https://thegiftticket.com/order</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/about</loc>
+        <loc>https://thegiftticket.com/about</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/privacy</loc>
+        <loc>https://thegiftticket.com/privacy</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/terms</loc>
+        <loc>https://thegiftticket.com/terms</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/faq</loc>
+        <loc>https://thegiftticket.com/faq</loc>
     </url>
     <url>
-        <loc>http://thegiftticket.com/contact</loc>
+        <loc>https://thegiftticket.com/contact</loc>
     </url>
 </urlset>

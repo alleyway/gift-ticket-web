@@ -9,7 +9,7 @@ twitter:
 
 facebook:
   app_id: 994582807295629
-  publisher: 956469971073545
+#  publisher: 956469971073545 <-throws errors in facebook when using on a "website" object
 
 # seems that this plugin picks up other .html files under bower components
 #gems:

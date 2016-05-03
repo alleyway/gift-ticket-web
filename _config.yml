@@ -2,10 +2,14 @@
 # Name of your blog (this will show up at the top of your page and in the RSS feed)
 name: The Gift Ticket
 
-url: http://thegiftticket.com/
+url: https://thegiftticket.com/
 
 twitter:
   username: thegiftticket
+
+facebook:
+  app_id: 994582807295629
+  publisher: 956469971073545
 
 # seems that this plugin picks up other .html files under bower components
 #gems:

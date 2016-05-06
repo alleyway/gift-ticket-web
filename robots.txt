@@ -7,5 +7,7 @@ Disallow: /index_old.html
 Disallow: /greeting_card.html
 Disallow: /greeting_card
 Disallow: /README.md
+Disallow: /success
+Disallow: /success.html
 Disallow: /bower_components/*
 

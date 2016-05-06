@@ -1146,3 +1146,7 @@ ul.about-features {
 .greeting-card-group input[type="radio"]:checked + span {
     color: #000000;
 }
+
+.thanks-container a {
+    color: #7FAEC4;
+}

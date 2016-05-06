@@ -12,6 +12,12 @@ $(function() {
 
 $(function () {
     fbq('track', 'Lead');
+    
+    $("input[name='submit']").on("click", function(){
+            ga('send', 'event', "Button", "PayPal Button Clicked");
+        });
+    });
+
 
     if (false){
         $("input[name='pre-first_name']").val("Michael");

@@ -481,10 +481,10 @@ a.intro_buy_now:hover {
     margin-bottom: 60px;
     font-weight: 700;
     padding: 30px 10px;
-    background-color: #4CAF50;
+    background-color: #ef4136;
     font-size: 20px;
     max-width: 500px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #fff;
     border-radius: 8px;
 }
 a.bottom_buy_now  {
@@ -513,6 +513,7 @@ footer {
 .footer_title {
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: 8px;
 }
 
 .sub_nav {
@@ -722,8 +723,9 @@ footer {
 }
 
 .footer_links a {
-    line-height: 1.9;
+    line-height: 2.4;
 }
+
 .legal ul, .legal ol {
     font-size: 20px;
     line-height: 1.6;

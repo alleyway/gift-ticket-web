@@ -12,11 +12,6 @@ $(function() {
 
 $(function () {
     fbq('track', 'Lead');
-    
-    $("input[name='submit']").on("click", function(){
-            ga('send', 'event', "Button", "PayPal Button Clicked");
-        });
-    });
 
 
     if (false){
@@ -91,6 +86,8 @@ $(function () {
 
     $("#pp_form").on("submit", function(e){
 
+        ga('send', 'event', "Button", "PayPal Button Clicked");
+        
         var checkoutElements = $("#checkout_elements");
         checkoutElements.empty();
 

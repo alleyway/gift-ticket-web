@@ -1048,6 +1048,20 @@ ul.about-features {
 
 /* cards */
 
+.envelope {
+    left: -16px;
+    top: 14px;
+    width: 200px;
+    height: 258px;
+    background: url('/img/envelope.svg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
 .card {
     width: 200px;
     height: 280px;
@@ -1057,6 +1071,9 @@ ul.about-features {
     /* float: left; */
     margin: 30px auto;
     cursor: pointer;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-out;
+
     -webkit-backface-visibility: hidden;
     -webkit-transition: all 0.3s ease-out;
 }
@@ -1079,6 +1096,11 @@ ul.about-features {
     left: 0;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+    transform-origin: 0 0;
+
     -webkit-backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: all 0.5s ease-out;
@@ -1098,12 +1120,17 @@ ul.about-features {
     background: linear-gradient(to right, #efefef, #f9f9f9);
     border: 1px solid #adadad;
 
+    transform: rotateY( 180deg );
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
     -webkit-transform: rotateY( 180deg );
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
 }
 
 .front {
+    transform: rotateY(-20deg);
     -webkit-transform: rotateY(-20deg);
     z-index: 2;
     border: 1px solid #B4B4B4;
@@ -1111,6 +1138,7 @@ ul.about-features {
 
 .back {
     background: #9dcc78;
+    transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
     z-index: 1;
     border: 1px solid #B4B4B4;
@@ -1124,7 +1152,12 @@ ul.about-features {
     /*-webkit-transform: translateX(20px);*/
 }
 
+.card:hover .envelope{
+    opacity: 0;
+}
+
 .card:hover .front{
+    transform: rotateY(-95deg);
     -webkit-transform: rotateY(-95deg);
 
 }
@@ -1150,3 +1183,4 @@ ul.about-features {
 .thanks-container a {
     color: #7FAEC4;
 }
+

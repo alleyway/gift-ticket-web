@@ -10,6 +10,21 @@ $(function() {
 });
 
 
+function showError(message) {
+
+    $('#message').html("<div class='alert alert-danger'>");
+    $('#message > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+        .append("</button>");
+    $('#message > .alert-danger')
+        .append("<strong>" + message + "</strong>");
+    $('#message > .alert-danger')
+        .append('</div>');
+}
+
+function clearError(){
+    $('#message').empty();
+}
+
 $(function () {
     fbq('track', 'Lead');
 
@@ -33,6 +48,7 @@ $(function () {
     }
 
     $(".gift_amounts li").on("click", function(e){
+        clearError();
         $(".gift_amounts li").removeClass("amount_selected");
         $(this).addClass("amount_selected");
 
@@ -43,6 +59,7 @@ $(function () {
 
     var once = false;
     $("input[name='where_to_send']").on("change", function (e) {
+        clearError();
         if (!once) {
             $(this).parents(".shipping-option .custom_order_group").addClass("custom_order_group_selected");
             once = true;
@@ -67,6 +84,7 @@ $(function () {
 
     var onceCard = false;
     $("input[name='card_choice']").on("change", function (e) {
+        clearError();
         if (!onceCard) {
             $(this).parents(".greeting-cards .custom_order_group").addClass("custom_order_group_selected");
             onceCard = true;
@@ -95,26 +113,26 @@ $(function () {
 
         if (!amount) {
             e.preventDefault();
-            alert("Please select an amount!");
+            showError("Please select a winning amount!");
             return;
         }
 
 
         if (!$('input:radio[name="card_choice"]:checked').val()){
             e.preventDefault();
-            alert("Please choose a whether you'd like a card!");
+            showError("Please choose a greeting card option!");
             return;
         }
 
         if (!$('input:radio[name="where_to_send"]:checked').val()){
             e.preventDefault();
-            alert("Please choose where to send!");
+            showError("Please choose where to send!");
             return;
         }
 
         if (isRecipientSelected() && !$(".bfh-states").val()){
             e.preventDefault();
-            alert("Please select a state!")
+            showError("Please select a state!");
             return;
         }
         

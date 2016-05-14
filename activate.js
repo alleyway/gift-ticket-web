@@ -23,7 +23,7 @@ $(function() {
         BASE_URL = "http://localhost:8080/api";
     }
 
-    if (window.location.href.indexOf('thegiftticket.com')) {
+    if (window.location.href.indexOf('thegiftticket.com') > 0) {
         BASE_URL = "https://api.thegiftticket.com/api";
     }
 

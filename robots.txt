@@ -10,4 +10,5 @@ Disallow: /README.md
 Disallow: /success
 Disallow: /success.html
 Disallow: /bower_components/*
+Disallow: /downloads/*
 

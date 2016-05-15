@@ -1,4 +1,7 @@
 
+function clearError(){
+    $('#success').empty();
+}
 
 
 $(function() {
@@ -78,6 +81,7 @@ $(function() {
 
     activationButton.on("click", function(e){
         e.preventDefault();
+        clearError();
         
         $('.box').spin('giftticket');
         activationButton.prop('disabled', true);

@@ -40,7 +40,7 @@ $(function() {
     });
 
 
-    var mobileEntry = $("#mobile");
+    var mobileEntry = $("#phone");
 
     mobileEntry.intlTelInput({
         onlyCountries: ["us"],
@@ -74,7 +74,7 @@ $(function() {
         $("input[name='activationCode']").val("555-555");
         $("input[name='name']").val("Michael Lake");
         $("input[name='email']").val("mlake900+test@gmail.com");
-        $("input[name='mobile']").val("434-202-9223");
+        $("input[name='phone']").val("434-202-9223");
     }
 
     var activationButton = $("#activation_button");
@@ -94,7 +94,7 @@ $(function() {
             "activationCode": activationCode.val(),
             "name" : $("input[name='name']").val(),
             "email" :$("input[name='email']").val(),
-            "mobileHolder" : mobileEntry.intlTelInput("getNumber"),
+            "phone" : mobileEntry.intlTelInput("getNumber"),
             "source" : "WEBSITE"
         };
 

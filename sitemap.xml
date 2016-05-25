@@ -13,7 +13,7 @@
         </image:image>
     </url>
     <url>
-        <loc>https://thegiftticket.com/activate</loc>
+        <loc>https://thegiftticket.com/register</loc>
     </url>
     <url>
         <loc>https://thegiftticket.com/order</loc>
@@ -32,5 +32,8 @@
     </url>
     <url>
         <loc>https://thegiftticket.com/contact</loc>
+    </url>
+    <url>
+        <loc>https://thegiftticket.com/blog/</loc>
     </url>
 </urlset>

@@ -2,7 +2,7 @@
 layout: base
 active: blog
 title: Gift Ticket Blog
-permalink: /blog
+permalink: /blog/
 description: Discover how the Gift Ticket is driving innovation in gift-giving...
 ---
 <!-- BEGIN additional head tags -->
@@ -31,7 +31,7 @@ description: Discover how the Gift Ticket is driving innovation in gift-giving..
                 <article>
                     <p class="meta" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} •
                         {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
-                    <p itemprop="description">{{ post.description }} <a href="{{ post.url }}"> read more...</a></p>
+                    <p itemprop="description">{{ post.description }} <a href="{{ post.url }}"> &mdash; read more...</a></p>
                 </article>
             </div>
             {% endfor %}

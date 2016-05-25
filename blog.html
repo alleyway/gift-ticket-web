@@ -1,0 +1,40 @@
+---
+layout: base
+active: blog
+title: Gift Ticket Blog
+permalink: /blog
+description: Discover how the Gift Ticket is driving innovation in gift-giving...
+---
+<!-- BEGIN additional head tags -->
+
+<!-- END additional head tags -->
+{% include navigation.html %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 text-left">
+            <h1>The Blog</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid blog-list">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+
+            {% for post in site.posts limit: 20 %}
+            <div class="blogContent" itemscope itemtype="http://schema.org/Article">
+                <a href="{{ site.prefix }}{{ post.url }}" itemprop="url"><h2 class="blogTitle" itemprop="name">{{
+                    post.title }}</h2></a>
+                <article>
+                    <p class="meta" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} •
+                        {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+                    <p itemprop="description">{{ post.description }} <a href="{{ post.url }}"> read more...</a></p>
+                </article>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

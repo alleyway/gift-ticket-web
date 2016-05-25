@@ -1187,3 +1187,14 @@ ul.about-features {
 .press a {
     color: #4CAC53;
 }
+.blog-list h2 {
+    color: #7FAEC4;
+}
+.blog-list a, .blog-list-container a {
+    color: #7FAEC4;
+}
+
+p.meta {
+    margin-bottom: 4px;
+    color: #848484;
+}

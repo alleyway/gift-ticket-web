@@ -1,0 +1,40 @@
+---
+
+
+
+---
+
+{% include header.html %}
+<!-- BEGIN additional head tags -->
+
+<!-- END additional head tags -->
+{% include navigation.html %}
+
+
+<div class="blog-list-container" itemscope itemtype="http://schema.org/Article">
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-5">
+                <h3 itemprop="name">{{ page.title }}</h3>
+                <header class="post-header">
+
+                    <p class="meta" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} •
+                        <span itemprop="author">{{page.author }}</span>{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+                </header>
+                <div class="postContainer">
+
+                    <article class="post-content" itemprop="articleBody">
+                        {{ content }}
+                    </article>
+                </div>
+                <!--<div class="comments" itemprop="Comment">-->
+                <!--% include comments.html %-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

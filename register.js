@@ -94,7 +94,7 @@ $(function() {
             "activationCode": activationCode.val(),
             "name" : $("input[name='name']").val(),
             "email" :$("input[name='email']").val(),
-            "phone" : mobileEntry.intlTelInput("getNumber"),
+            "mobileHolder" : mobileEntry.intlTelInput("getNumber"),
             "source" : "WEBSITE"
         };
 

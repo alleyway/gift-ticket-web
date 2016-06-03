@@ -888,16 +888,17 @@ ul.about-features {
 
 
 .box {
-    margin-top: 10px;
+    margin-top: 0px;
     background-color: #ffffff;
     border-radius: 4px;
     padding: 15px 30px 15px 30px;
     margin-bottom: 10px;
 }
 
-@media (min-width:800px) {
+@media (min-width:768px) {
     .box {
         border: 1px solid #cccccc;
+        margin-top: 40px;
     }
 }
 

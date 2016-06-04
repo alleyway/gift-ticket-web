@@ -65,7 +65,14 @@ $(function() {
 
     activationCode.inputmask({
         mask:"***-***",
-        showMaskOnHover: false
+        showMaskOnHover: false,
+        definitions: {
+            '*': {
+                validator: "[0-9A-Za-z]",
+                cardinality: 1,
+                casing: "upper"
+            }
+        }
     });
 
     activationCode.attr('autocomplete', 'off');

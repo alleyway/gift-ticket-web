@@ -658,10 +658,6 @@ footer {
     color: #7FAEC4;
 }
 
-.floating-label-form-group-with-value #activationCode {
-    text-transform: uppercase;
-}
-
 /*form .row:first-child .floating-label-form-group {*/
     /*border-top: 1px solid #7FAEC4;*/
 /*}*/

@@ -1017,12 +1017,12 @@ ul.about-features {
     border: 1px solid gray;
     margin: 0;
     position:absolute;
-    display: block;
-    visibility: hidden;
+    display: none;
     z-index: 1000000;
     min-width: 100px;
     padding: 10px 0px;
     width: 100px;
+    top: -50px;
     margin-left: -130px;
     float: left;
     clear:both;

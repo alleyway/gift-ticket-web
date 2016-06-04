@@ -57,8 +57,10 @@ $(function() {
 
     $("body").on("focus", "#activationCode", function(e){
         $(this).parent().toggleClass("floating-label-form-group-with-value", true);
+        $("div.flip-container")[0].classList.toggle("flip");
     }).on("blur", "#activationCode", function(e){
         $(this).parent().toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
+        $("div.flip-container")[0].classList.toggle("flip");
     });
 
     activationCode.inputmask({

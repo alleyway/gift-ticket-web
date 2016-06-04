@@ -19,8 +19,18 @@ redirect_from:
             <div class="box">
                 <h3 class="text-center" style="margin-bottom:10px; margin-top: 0;">Register a Gift Ticket</h3>
 
-                <div class="text-center">
-                    <img src="img/back_giftticket.png" style="width: 120px; margin: 8px" />
+
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin:8px auto;">
+                    <div class="flipper">
+                        <div class="front">
+                            <!-- front content -->
+                            <img src="img/giftticket_front.png" style="width: 120px;"/>
+                        </div>
+                        <div class="back">
+                            <!-- back content -->
+                            <img src="img/giftticket_back.png" style="width: 120px;"/>
+                        </div>
+                    </div>
                 </div>
 
                 <form name="activation_form" id="activation_form" method="post" autocomplete="on">

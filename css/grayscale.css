@@ -1018,6 +1018,7 @@ ul.about-features {
     margin: 0;
     position:absolute;
     display: block;
+    visibility: hidden;
     z-index: 1000000;
     min-width: 100px;
     padding: 10px 0px;

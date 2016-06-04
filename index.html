@@ -23,6 +23,9 @@ image:
     <meta property="og:type" content="product" />
     <meta property="product:price:amount" content="4.95" />
     <meta property="product:price:currency" content="USD" />
+
+    <link rel="stylesheet" href="/bower_components/wowjs/css/libs/animate.css">
+
 <!-- END additional head tags -->
 {% include navigation.html %}
 
@@ -74,7 +77,7 @@ image:
 
     <div class="row hidden-xs hidden-md hidden-sm">
         <div class="col-lg-offset-3 col-lg-9">
-            <div id="share-menu" class="cos-share-floater">
+            <div id="share-menu" class="cos-share-floater wow fadeIn" data-wow-delay="2s" data-wow-duration="3s">
                 <ul class="list-unstyled share_buttons">
                     <li><div class="fb-like" data-href="https://thegiftticket.com" data-layout="box_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
                     <li><a data-pin-do="buttonPin" data-pin-color="red" data-pin-count="above"  href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fthegiftticket.com&media=https%3A%2F%2Fthegiftticket.com%2Fimg%2FGift_Ticket_Social_Share_Pintrest.png&description=Gift%20Ticket%3A%20The%20fun%20way%20to%20gift%20money!"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_28.png" /></a></li>
@@ -193,4 +196,8 @@ image:
 
 
 
+<script src="/bower_components/wowjs/dist/wow.min.js"></script>
 
+<script language="JavaScript">
+    new WOW().init();
+</script>

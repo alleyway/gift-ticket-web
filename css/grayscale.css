@@ -1213,7 +1213,7 @@ p.meta {
     transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
+.flip-container, .ticketfront, .ticketback {
     width: 120px;
     height: 72px;
 }
@@ -1227,7 +1227,7 @@ p.meta {
 }
 
 /* hide back of pane during swap */
-.front, .back {
+.ticketfront, .ticketback {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     position: absolute;
@@ -1236,14 +1236,14 @@ p.meta {
 }
 
 /* front pane, placed above back */
-.front {
+.ticketfront {
     z-index: 2;
     /* for firefox 31 */
     transform: rotateY(0deg);
 }
 
 /* back, initially hidden pane */
-.back {
+.ticketback {
     transform: rotateY(180deg);
 }
 

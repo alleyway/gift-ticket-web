@@ -94,12 +94,18 @@ $(function () {
 
 
         if ($(this).val() == "None") {
+            $(".greeting-cards .card").toggleClass("open-greeting", false);
             $("#order_pre-tax").text("$4.95");
         } else {
             $("#order_pre-tax").text("$5.95");
         }
 
+    });
 
+    //handles open and close of greeting card on mobile
+    $(".greeting-cards .card").on("click mouseenter mouseleave", function(e){
+
+        $(this).toggleClass("open-greeting");
     });
 
     $("#pp_form").on("submit", function(e){

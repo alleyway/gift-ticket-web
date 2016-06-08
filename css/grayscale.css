@@ -413,7 +413,6 @@ body {
     height: 70px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-
 }
 
 .buy_now_select_value {
@@ -476,26 +475,38 @@ a.intro_buy_now:hover {
 
 .bottom_buy_now {
     width: 96%;
-    color: white;
     margin-top:60px;
     margin-bottom: 60px;
     font-weight: 700;
     padding: 30px 10px;
-    background-color: #ef4136;
+    background: #fceabb;
+    background: -moz-linear-gradient(top,  #fceabb 0%, #f7cf4c 26%, #f8b500 93%, #f8b500 93%, #f9b70e 100%);
+    background: -webkit-linear-gradient(top,  #fceabb 0%,#f7cf4c 26%,#f8b500 93%,#f8b500 93%,#f9b70e 100%);
+    background: linear-gradient(to bottom,  #fceabb 0%,#f7cf4c 26%,#f8b500 93%,#f8b500 93%,#f9b70e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#f9b70e',GradientType=0 );
+
     font-size: 20px;
     max-width: 500px;
-    border: 2px solid #fff;
+    border: 2px solid #848484;
     border-radius: 8px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+
 }
 a.bottom_buy_now  {
-    color: white;
+    color: #505050;
     letter-spacing: 1px;
 }
 a.bottom_buy_now:hover {
     text-decoration: none;
-    border: 2px solid #4CAF50;
-    background-color: white;
-    color: #4CAF50;
+    /*border: 2px solid #4CAF50;*/
+    /*background: #f8b500;*/
+    /*color: #181818;*/
+    color: #505050;
 }
 
 .greybackground {
@@ -819,7 +830,7 @@ ul.about-features {
 
 
 .custom_order_group {
-    background-color: #e1e1e1;
+    background-color: #f9f9f9;
     border-radius: 8px;
     margin-top: 16px;
     margin-left: 4px;

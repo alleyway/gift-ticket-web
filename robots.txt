@@ -9,6 +9,6 @@ Disallow: /greeting_card
 Disallow: /README.md
 Disallow: /success
 Disallow: /success.html
-Disallow: /bower_components/*
+Disallow: /bower_components/*.html$
 Disallow: /downloads/*
 

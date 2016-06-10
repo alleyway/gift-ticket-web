@@ -11,4 +11,6 @@ Disallow: /success
 Disallow: /success.html
 Disallow: /bower_components/*.html$
 Disallow: /downloads/*
+Disallow: /s/*
+Disallow: /s.html
 

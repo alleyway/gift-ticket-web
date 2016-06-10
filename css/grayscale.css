@@ -1260,3 +1260,67 @@ p.meta {
 .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
     transform: rotateY(180deg);
 }
+
+
+
+.btn-paypal {
+    width: 100%;
+    background-color: #ffc439;
+    height: 60px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+a.btn-paypal:active, a.btn-paypal:hover, a.btn-paypal:visited {
+    background-color: #ffc439;
+    border-width: 2px;
+    border-color: black;
+}
+
+.btn-paypal img {
+    height: 40px;
+}
+
+.btn-venmo {
+    width: 100%;
+    height: 60px;
+    background-color: #3D95CE;
+    padding: 14px;
+    margin-bottom: 30px;
+}
+
+a.btn-venmo:active, a.btn-venmo:hover, a.btn-venmo:visited {
+    background-color: #3D95CE;
+    border-width: 2px;
+    border-color: black;
+}
+
+.btn-venmo img {
+    height: 30px;
+}
+
+
+.gt-logo {
+    width: 100%;
+    height: 90px;
+    background-image: url("/img/GiftTicket_Logo.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gt-recipient-email {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 0px;
+}
+
+.send_money_footer a {
+    color: #337ab7;
+}
+
+.gt-message {
+    font-size: 18px;
+}

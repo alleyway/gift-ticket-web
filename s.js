@@ -1,8 +1,8 @@
 
 $(function() {
 
-    $.urlParam = function (name) {
-        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    $.readScratcherId = function () {
+        var results = new RegExp('\\?([^&#]*)').exec(window.location.href);
         if (results == null) {
             return null;
         }
@@ -21,7 +21,7 @@ $(function() {
         BASE_URL = "https://api.thegiftticket.com/api";
     }
 
-    var scratcherId = $.urlParam("s");
+    var scratcherId = $.readScratcherId();
 
 
     $.ajax({
@@ -61,5 +61,54 @@ $(function() {
         }
     });
 
+
+    $('#payment_container .btn-venmo').on('click', function(e){
+
+        var origLink = e.currentTarget.href;
+        //using maps.google.com will launch native app
+        if(isMobile.Android()){
+            e.preventDefault();
+            window.location = "venmo://paycharge" + origLink.substring(18);
+
+            var count = 0;
+            var myInterval = null;
+            var before = Date.now();
+            myInterval = setInterval(function(){
+                count++;
+
+                if (count>15){
+                    clearInterval(myInterval);
+                    var after = Date.now();
+                    if ((after - before) < 3000){
+                        window.location.href = origLink;
+                    }
+                }
+            }, 100);
+
+        }
+    });
     
 });
+
+
+
+var isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};

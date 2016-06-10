@@ -1,6 +1,39 @@
 
 $(function() {
 
+    $(function () {
+        $.fn.spin.presets.c2p = {
+            lines: 13 // The number of lines to draw
+            , length: 28 // The length of each line
+            , width: 14 // The line thickness
+            , radius: 42 // The radius of the inner circle
+            , scale: 0.75 // Scales overall size of the spinner
+            , corners: 1 // Corner roundness (0..1)
+            , color: '#000' // #rgb or #rrggbb or array of colors
+            , opacity: 0.25 // Opacity of the lines
+            , rotate: 0 // The rotation offset
+            , direction: 1 // 1: clockwise, -1: counterclockwise
+            , speed: 1 // Rounds per second
+            , trail: 60 // Afterglow percentage
+            , fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
+            , zIndex: 2e9 // The z-index (defaults to 2000000000)
+            , className: 'spinner' // The CSS class to assign to the spinner
+            , top: '30%' // Top position relative to parent
+            , left: '50%' // Left position relative to parent
+            , shadow: false // Whether to render a shadow
+            , hwaccel: false // Whether to use hardware acceleration
+            , position: 'absolute' // Element positioning
+        };
+
+        
+
+        $(".btn-paypal, .btn-venmo").on("click", function () {
+
+            $("body").spin('c2p');
+
+        });
+    });
+
     $.readScratcherId = function () {
         var results = new RegExp('\\?([^&#]*)').exec(window.location.href);
         if (results == null) {
@@ -17,6 +50,10 @@ $(function() {
         BASE_URL = "http://localhost:8080/api";
     }
 
+    if (window.location.href.indexOf('alleyway.duckdns.org') > 0) {
+        BASE_URL = "http://alleyway.duckdns.org:8080/api";
+    }
+    
     if (window.location.href.indexOf('thegiftticket.com') > 0) {
         BASE_URL = "https://api.thegiftticket.com/api";
     }
@@ -65,29 +102,42 @@ $(function() {
     $('#payment_container .btn-venmo').on('click', function(e){
 
         var origLink = e.currentTarget.href;
-        //using maps.google.com will launch native app
-        if(isMobile.Android()){
-            e.preventDefault();
-            window.location = "venmo://paycharge" + origLink.substring(18);
 
-            var count = 0;
-            var myInterval = null;
-            var before = Date.now();
-            myInterval = setInterval(function(){
-                count++;
+        // try to launch the native app first, if that fails, then load web-page
 
-                if (count>15){
-                    clearInterval(myInterval);
-                    var after = Date.now();
-                    if ((after - before) < 3000){
-                        window.location.href = origLink;
-                    }
+        e.preventDefault();
+        window.location = "venmo://paycharge" + origLink.substring(18);
+        var count = 0;
+        var myInterval = null;
+        var before = Date.now();
+        myInterval = setInterval(function(){
+            count++;
+
+            if (count>17){
+                clearInterval(myInterval);
+                var after = Date.now();
+                if ((after - before) < 3000){
+                    window.location.href = origLink;
                 }
-            }, 100);
+            }
+        }, 100);
 
+
+    });
+
+    $(document).on('show', function() {
+        $("body").spin(false);
+    });
+
+    $(document).on('hide', function() {
+        $("body").spin(false);
+    });
+
+    $(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            $("body").spin(false);
         }
     });
-    
 });
 
 

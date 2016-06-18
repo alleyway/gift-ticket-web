@@ -666,7 +666,10 @@ footer {
 }
 
 .floating-label-form-group-with-focus label {
+    top: 0;
+    opacity: 1;
     color: #7FAEC4;
+
 }
 
 /*form .row:first-child .floating-label-form-group {*/

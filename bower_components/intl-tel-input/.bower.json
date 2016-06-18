@@ -22,7 +22,7 @@
     "tag": "v7.1.1",
     "commit": "50abd71e1e5f51e5d50f87909d85948034647f4f"
   },
-  "_source": "git://github.com/Bluefieldscom/intl-tel-input.git",
+  "_source": "https://github.com/Bluefieldscom/intl-tel-input.git",
   "_target": "~7.1.0",
   "_originalSource": "intl-tel-input"
 }

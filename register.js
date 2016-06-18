@@ -43,7 +43,10 @@ $(function() {
     var mobileEntry = $("#phone");
 
     mobileEntry.intlTelInput({
-        onlyCountries: ["us"],
+        autoPlaceholder: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+            return "Phone";
+        },
         utilsScript: "/bower_components/intl-tel-input/lib/libphonenumber/build/utils.js"
     });
 
@@ -80,7 +83,7 @@ $(function() {
     activationCode.attr('autocapitalize', 'off');
 
     if (false){
-        $("input[name='activationCode']").val("555-555");
+        $("input[name='activationCode']").val("7ED-PHV");
         $("input[name='name']").val("Michael Lake");
         $("input[name='email']").val("mlake900+test@gmail.com");
         $("input[name='phone']").val("434-202-9223");
@@ -135,7 +138,8 @@ $(function() {
 
                     //clear all fields
                     $('#activation_form').trigger("reset");
-                    
+                    $('#activation_form label').parent().removeClass("floating-label-form-group-with-value");
+                    $('#activation_form label').parent().removeClass("floating-label-form-group-with-focus");
                     
                 } else {
                     // Fail message
